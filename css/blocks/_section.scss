@@ -1,0 +1,19 @@
+.section {
+  height: 100vh;
+  min-height: 2000px; /*временно не 650*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section__title {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  margin-bottom: 53px;
+  text-align: center;
+  color: $black;
+  text-transform: uppercase;
+}

@@ -1,0 +1,44 @@
+.benefit {
+  text-align: center;
+}
+
+.benefit__image--wrapper {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  position: relative;
+  background: #F2F5F4;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.benefit__icon {
+  width: 68px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,- 50%);
+}
+
+.benefit__title {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: $black;
+  margin-bottom: 7px;
+  text-decoration: none;
+}
+
+.benefit__decs {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 0 11%;
+  text-decoration: none;
+}

@@ -1,0 +1,100 @@
+.welcome {
+  background: url("../../img/picture1.png") left 80% center no-repeat;
+  background-color: #F5F5F5;
+  height: 100vh;
+  min-height: 650px;
+  color: $black;
+  position: relative;
+  
+  &:after {
+    position: absolute;
+    bottom: -25px;
+    right: 12%;  
+    content: url("../../img/stick.png");
+  }
+}
+
+.welcome__title-section {
+  /*max-width: 400px;*/
+  min-height: 156px;
+  width: 55%;
+}
+
+.welcome__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 24px 0 50px 0;
+}
+
+.welcome__main-title {
+  color: $black;
+  font-family: 'Play';
+  font-style: bold;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+.welcome__title-desc {
+  color: $black;
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  margin-bottom: 36px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.hello {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 335px;
+    margin-bottom: 70px;
+  }
+  &__title {
+    text-align: left;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    max-width: 400px;
+    margin-bottom: 22px;
+    color: $textColor;
+  }
+  &__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 33.5px;
+    color: $textColor;
+  }
+  &__button {
+    width: 163px;
+    height: 54px;
+  }
+}*/

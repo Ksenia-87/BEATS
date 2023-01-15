@@ -1,0 +1,594 @@
+@import "./blocks/normalize.css";
+@import 'https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Open+Sans&family=Play:wght@400;700&display=swap';
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Play", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #666666;
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  /*overflow: hidden;*/
+  background-color: #fff;
+  min-height: 100%;
+  width: 100%;
+  min-width: 1100px;
+}
+
+.wrapper__content {
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1100px;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  /*cursor: pointer;
+   display: block;*/
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  /*max-height: 100%;*/
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo, .menu__list, .menu__items, .contacts {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__item {
+  margin-right: 27px;
+}
+.menu__item:last-child {
+  margin-right: 0;
+}
+.menu__item__link {
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.phone-number {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.phone-number__icon-elem {
+  width: 13.9px;
+  height: 13.8px;
+  margin-right: 6px;
+}
+
+/*.logo {
+  display: block;
+	margin-right: 38px;
+
+  &__img {
+    width: 39.9px;
+    height: 39.9px;
+  }
+}
+
+.logo, .menu__list, .menu__items, .contacts {
+  display: inline-flex;
+}*/
+/*&__item {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  margin-right: 27px;
+  color: $textColor;
+  &:last-child {
+    margin-right: 0;
+  }
+}*/
+/*.contacts {
+  display: flex;
+  &__phone {
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: $textColor;
+    position: absolute;
+    &::before {
+      content: url(../../img/phone.png);
+      position: absolute;
+      margin-right: 6px;
+      width: 13.9px;
+      height: 13.8px;
+      transform: translate(0%, 50%);
+    }
+  }
+}*/
+.welcome {
+  background: url("../../img/picture1.png") left 80% center no-repeat;
+  background-color: #F5F5F5;
+  height: 100vh;
+  min-height: 650px;
+  color: #292929;
+  position: relative;
+}
+.welcome:after {
+  position: absolute;
+  bottom: -25px;
+  right: 12%;
+  content: url("../../img/stick.png");
+}
+
+.welcome__title-section {
+  /*max-width: 400px;*/
+  min-height: 156px;
+  width: 55%;
+}
+
+.welcome__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  padding: 24px 0 50px 0;
+}
+
+.welcome__main-title {
+  color: #292929;
+  font-family: "Play";
+  font-style: bold;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+.welcome__title-desc {
+  color: #292929;
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  margin-bottom: 36px;
+}
+
+/*.hello {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 335px;
+    margin-bottom: 70px;
+  }
+  &__title {
+    text-align: left;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    max-width: 400px;
+    margin-bottom: 22px;
+    color: $textColor;
+  }
+  &__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 33.5px;
+    color: $textColor;
+  }
+  &__button {
+    width: 163px;
+    height: 54px;
+  }
+}*/
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features__items {
+  margin-right: 18px;
+}
+.features__items:last-child {
+  margin-right: 0;
+}
+
+.feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 166px;
+}
+
+.feature__icon {
+  width: 52px;
+  height: 52px;
+  margin-right: 12px;
+}
+
+.feature__text {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #292929;
+  max-width: 114px;
+}
+
+.button {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 18px 31px;
+  text-transform: uppercase;
+  border-radius: 100px;
+}
+.button--red {
+  background: #E01F3D;
+  color: #fff;
+}
+.button--red:hover {
+  color: #fff;
+  background: #CA1B36;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section__title {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  margin-bottom: 53px;
+  text-align: center;
+  color: #292929;
+  text-transform: uppercase;
+}
+
+.headline__title {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.headline__subtitle {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 0 26%;
+  text-align: center;
+  margin-bottom: 62px;
+}
+
+.benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 98px;
+}
+
+.benefits__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 3%;
+  position: relative;
+}
+.benefits__item::before {
+  content: url(../../img/decor.png);
+  position: absolute;
+  top: 30px;
+  right: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+.benefits__item:first-child {
+  padding-left: 0;
+}
+.benefits__item:last-child {
+  padding-right: 0;
+}
+.benefits__item:last-child:before {
+  display: none;
+}
+
+.benefit {
+  text-align: center;
+}
+
+.benefit__image--wrapper {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  position: relative;
+  background: #F2F5F4;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.benefit__icon {
+  width: 68px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.benefit__title {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #292929;
+  margin-bottom: 7px;
+  text-decoration: none;
+}
+
+.benefit__decs {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 0 11%;
+  text-decoration: none;
+}
+
+.benefits-section {
+  position: relative;
+  padding-top: 101px;
+}
+.benefits-section:before {
+  content: url("../../img/triangle.png");
+  position: absolute;
+  bottom: -15px;
+  left: 5%;
+}
+
+.reviews__display {
+  background: #F8FAF9;
+  padding: 42px;
+}
+
+.reviews__display-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reviews__avatar {
+  min-width: 253px;
+  min-height: 264px;
+}
+
+.reviews__avatar-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 40px;
+  margin-right: 107px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.reviews__title {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #292929;
+  margin-bottom: 27px;
+}
+
+.reviews__text {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 38px;
+  width: 498px;
+}
+
+.reviews__author {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #292929;
+}
+
+.reviews__display {
+  background: #F8FAF9;
+  padding: 42px;
+}
+
+.reviews__display-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reviews__avatar {
+  min-width: 253px;
+  min-height: 264px;
+}
+
+.reviews__avatar-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 40px;
+  margin-right: 107px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.reviews__title {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #292929;
+  margin-bottom: 27px;
+}
+
+.reviews__text {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 38px;
+  width: 498px;
+}
+
+.reviews__author {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #292929;
+}
