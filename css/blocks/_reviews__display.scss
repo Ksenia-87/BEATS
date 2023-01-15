@@ -2,6 +2,21 @@
   background: #F8FAF9;
   padding: 42px;
   margin-bottom: 15px;
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 93px;
+    height: 93px;
+    background: $white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -61px;
+  }
 }
 
 .reviews__display-inner {
@@ -9,8 +24,8 @@
 }
 
 .reviews__avatar {
-  min-width: 253px;
-  min-height: 264px;
+  width: 253px;
+  height: 264px;
 }
 
 .reviews__avatar-img {

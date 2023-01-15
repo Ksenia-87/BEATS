@@ -7,6 +7,8 @@
   padding: 18px 31px;
   text-transform: uppercase;
   border-radius: 100px;
+  border: none;
+  cursor: pointer;
 
   &--red {
     background: $red;
@@ -15,6 +17,17 @@
     &:hover {
       color: #fff;
       background: $darkRed;
+    }
+  }
+
+  &--transparent {
+    background: transparent;
+    color: $white;
+    text-transform: none;
+    margin-left: 15px;
+
+    &:hover {
+      color: $red;
     }
   }
 }

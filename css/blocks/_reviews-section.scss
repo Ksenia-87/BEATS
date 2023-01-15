@@ -1,0 +1,10 @@
+.reviews__section {
+  position: relative;
+
+  &:before {
+    content: url("../../img/circle.png");
+    position: absolute;
+    bottom: -20px;
+    left: 5%;
+  }
+}

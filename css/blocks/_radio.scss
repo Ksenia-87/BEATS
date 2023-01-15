@@ -1,0 +1,48 @@
+.radio {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 20px;
+
+  &--checkbox {
+    .radio__visible {
+      border-radius: 0;
+
+      &:before {
+        background: url("../../img/checkmark.png") center no-repeat;
+      }
+    }
+
+  }
+}
+
+.radio__elem {
+  display: none;
+
+  &:checked ~ .radio__visible {
+    &:before {
+      display: block;
+    }
+  }
+}
+
+.radio__visible {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  border-radius: 50%;
+  background: $white;
+
+  &:before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background: $red;
+    border-radius: 50%;
+    position: absolute;
+    display: none ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
