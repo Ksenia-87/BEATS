@@ -206,7 +206,7 @@ footer {
   position: absolute;
   bottom: -25px;
   right: 12%;
-  content: url("../../img/stick.png");
+  content: url("../img/stick.png");
 }
 
 .welcome__container {
@@ -473,7 +473,7 @@ footer {
   position: relative;
 }
 .benefits-section:before {
-  content: url("../../img/triangle.png");
+  content: url("../img/triangle.png");
   position: absolute;
   bottom: -15px;
   left: 5%;
@@ -483,7 +483,7 @@ footer {
   position: relative;
 }
 .reviews__section:before {
-  content: url("../../img/circle.png");
+  content: url("../img/circle.png");
   position: absolute;
   bottom: -20px;
   left: 5%;
