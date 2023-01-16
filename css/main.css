@@ -195,7 +195,7 @@ footer {
   }
 }*/
 .welcome {
-  background: url("../../img/picture1.png") left 75% center no-repeat;
+  background: url("../img/picture1.png") left 75% center no-repeat;
   background-color: #F5F5F5;
   height: 100vh;
   min-height: 650px;
