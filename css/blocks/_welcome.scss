@@ -1,5 +1,5 @@
 .welcome {
-  background: url("../../img/picture1.png") left 70% center no-repeat;
+  background: url("../../img/picture1.png") left 75% center no-repeat;
   background-color: #F5F5F5;
   height: 100vh;
   min-height: 650px;
@@ -14,18 +14,17 @@
   }
 }
 
-.welcome__title-section {
-  /*max-width: 400px;*/
-  min-height: 156px;
-  width: 55%;
-}
-
 .welcome__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   padding: 24px 0 50px 0;
+}
+
+.welcome__title-section {
+  min-height: 300px;
+  width: 55%;
 }
 
 .welcome__main-title {

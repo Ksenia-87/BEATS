@@ -18,7 +18,7 @@
 
 .radio__elem {
   display: none;
-
+  
   &:checked ~ .radio__visible {
     &:before {
       display: block;
@@ -45,4 +45,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+.radio__title {
+  margin-left: 10px;
 }
