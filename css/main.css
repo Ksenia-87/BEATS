@@ -717,7 +717,7 @@ footer {
   border-radius: 0;
 }
 .radio--checkbox .radio__visible:before {
-  background: url("../../img/checkmark.png") center no-repeat;
+  background: url("../img/checkmark.png") center no-repeat;
 }
 
 .radio__elem {
