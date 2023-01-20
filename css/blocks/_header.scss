@@ -6,6 +6,12 @@ $textColor: #292929;
   align-items: center;
 }
 
+.phone-number.header__phone-number {
+  @include tablets {
+    display: none;
+  }
+}
+
 .logo, .menu__list, .menu__items, .contacts {
   display: inline-flex;
 }
@@ -13,10 +19,23 @@ $textColor: #292929;
 .menu {
   display: flex;
   align-items: center;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.beats_logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.logo {
+  width: 100%;
 }
 
 .menu__item {
-  margin-right: 27px;
+  margin-right: 1.6875rem;
 
   &:last-child {
     margin-right: 0;
@@ -26,8 +45,8 @@ $textColor: #292929;
     font-family: 'Alegreya Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
   }
 }
 
@@ -35,65 +54,19 @@ $textColor: #292929;
   font-family: 'Play';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
   display: flex;
   align-items: center;
 }
 
+.phone-number__icon {
+  width: 0.86875rem;
+  height: 0.8625rem;
+  margin-right: 0.375;
+}
+
 .phone-number__icon-elem {
-  width: 13.9px;
-  height: 13.8px;
-  margin-right: 6px;
+  width: 100%;
 }
 
-/*.logo {
-  display: block;
-	margin-right: 38px;
-
-  &__img {
-    width: 39.9px;
-    height: 39.9px;
-  }
-}
-
-.logo, .menu__list, .menu__items, .contacts {
-  display: inline-flex;
-}*/
-
-
-
-  /*&__item {
-    font-family: 'Alegreya Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    margin-right: 27px;
-    color: $textColor;
-    &:last-child {
-      margin-right: 0;
-    }
-  }*/
-
-
-/*.contacts {
-  display: flex;
-  &__phone {
-    font-family: 'Play';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 18px;
-    color: $textColor;
-    position: absolute;
-    &::before {
-      content: url(../../img/phone.png);
-      position: absolute;
-      margin-right: 6px;
-      width: 13.9px;
-      height: 13.8px;
-      transform: translate(0%, 50%);
-    }
-  }
-}*/

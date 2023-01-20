@@ -12,23 +12,27 @@
 
 .feature {
   display: flex;
-  max-width: 166px;
+  max-width: 10.375rem;
 }
 
 .feature__icon {
-  width: 52px;
-  height: 52px;
-  margin-right: 12px;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-right: 0.75rem;
+}
+
+.feature__img {
+  width: 100%;
 }
 
 .feature__text {
   font-family: 'Play';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 1rem;
+  line-height: 1.125rem;
   color: $black;
-  max-width: 114px;
+  max-width: 7.125rem;
 }
 
 

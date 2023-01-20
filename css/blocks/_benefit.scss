@@ -4,18 +4,19 @@
 
 .benefit__image--wrapper {
   display: inline-block;
-  width: 128px;
-  height: 128px;
+  width: 8rem;
+  height: 8rem;
   position: relative;
   background: #F2F5F4;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .benefit__icon {
-  width: 68px;
-  height: 60px;
+  max-width: 100%;
+  /*width: 68px;*/
+  height: 3.75rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -26,10 +27,10 @@
   font-family: 'Play';
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
   color: $black;
-  margin-bottom: 7px;
+  margin-bottom: 0.4375rem;
   text-decoration: none;
 }
 
@@ -37,8 +38,8 @@
   font-family: 'Play';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   padding: 0 11%;
   text-decoration: none;
 }

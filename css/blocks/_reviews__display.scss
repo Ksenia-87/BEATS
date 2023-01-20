@@ -1,21 +1,21 @@
 .reviews__display {
   background: #F8FAF9;
-  padding: 42px;
-  margin-bottom: 15px;
+  padding: 2.625rem;
+  margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
 
   &:before {
     content: "";
     display: block;
-    width: 93px;
-    height: 93px;
+    width: 5.8125rem;
+    height: 5.8125rem;
     background: $white;
     border-radius: 50%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -61px;
+    top: -3.8125rem;
   }
 }
 
@@ -24,9 +24,9 @@
 }
 
 .reviews__avatar {
-  width: 253px;
-  height: 264px;
-  margin-right: 40px;
+  width: 15.8125rem;
+  height: 16.5rem;
+  margin-right: 2.5rem;
 }
 
 .reviews__avatar-img {
@@ -37,36 +37,36 @@
 
 .reviews__content {
   flex: 1;
-  padding-right: 107px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-right: 6.6875rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .reviews__title {
   font-family: 'Play';
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
   color: $black;
-  margin-bottom: 27px;
+  margin-bottom: 1.6875rem;
 }
 
 .reviews__text {
   font-family: 'Play';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  margin-bottom: 38px;
-  width: 498px;
+  font-size: 1 rem;
+  line-height: 1.1875rem;
+  margin-bottom: 2.375rem;
+  width: 31.125rem;
 }
 
 .reviews__author {
   font-family: 'Play';
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
   color: $black;
 }

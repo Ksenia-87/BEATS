@@ -6,7 +6,12 @@ $red: #E01F3D;
 $darkRed: #CA1B36;
 $white: #FFFFFF;
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px; 
 
+
+@import "./blocks/_media.scss";
 @import "./blocks/normalize.css";
 
 /*@import 'https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Open+Sans&family=Play:wght@400;700&display=swap';*/
@@ -15,7 +20,6 @@ $white: #FFFFFF;
 @import "./blocks/_header.scss";
 @import "./blocks/_welcome.scss";
 @import "./blocks/_features.scss";
-@import "./blocks/_feature.scss";
 @import "./blocks/_button.scss";
 @import "./blocks/_section.scss";
 @import "./blocks/_headline.scss";
@@ -30,8 +34,4 @@ $white: #FFFFFF;
 @import "./blocks/_form.scss";
 @import "./blocks/_radio.scss";
 @import "./blocks/_fixed-menu.scss";
-
-
-
-
 
