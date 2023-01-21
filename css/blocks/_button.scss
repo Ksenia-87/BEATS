@@ -13,12 +13,7 @@
 
   &--red {
     background: $red;
-    color: #fff;
-
-    &:hover {
-      color: #fff;
-      background: $darkRed;
-    }
+    color: $white;  
   }
 
   &--transparent {
@@ -27,9 +22,12 @@
     text-transform: none;
     margin-left: 0.9375rem;
 
-    &:hover {
+    @include tablets {
       color: $red;
     }
   }
 }
 
+.button--red:hover {
+  background: $darkRed;
+}

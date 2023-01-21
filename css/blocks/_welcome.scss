@@ -1,5 +1,5 @@
 .welcome {
-  background: url("../img/picture1100.png") left 75% center no-repeat;
+  /*background: url("../img/picture1100.png") left 75% center no-repeat;*/
   background-color: #F5F5F5;
   height: 100vh;
   min-height: 40.625rem;
@@ -32,8 +32,9 @@
 }
 
 .welcome__title-section {
-  min-height: 18.75rem;
-  width: 55%;
+  position: relative;
+  /*min-height: 18.75rem;*/
+  width: 46%;
 
   @include tablets {
     width: 100%;
@@ -46,7 +47,11 @@
   }
 
   &:before {
+    position: absolute;
     content: url("../img/picture768.png") center no-repeat;
+    display: block;
+    width: 20.1875rem;
+    height: 20.1875rem;
   }
 }
 
@@ -59,6 +64,10 @@
   line-height: 3.25rem;
   margin-bottom: 1.375rem;
   text-transform: uppercase;
+
+  @include tablets {
+    width: 41.5625rem;
+  }
 }
 
 .welcome__title-desc {
@@ -69,6 +78,23 @@
   font-size: 1.3125rem;
   line-height: 1.5625rem;
   margin-bottom: 2.25rem;
+  width: 20.9375rem;
+
+  @include tablets {
+    width: 23.1875rem;
+  }
+}
+
+.welcome__img {
+  position: absolute;
+  width: 30.5625rem;
+  height: 30.5625rem;
+  margin-left: 60%/*40rem*/;
+  margin-top: 8%/*6.9375rem*/;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .welcome__spec-section {
@@ -92,36 +118,3 @@
 
 
 
-
-/*.hello {
-  &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 335px;
-    margin-bottom: 70px;
-  }
-  &__title {
-    text-align: left;
-    font-family: 'Play';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 52px;
-    max-width: 400px;
-    margin-bottom: 22px;
-    color: $textColor;
-  }
-  &__subtitle {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 20px;
-    margin-bottom: 33.5px;
-    color: $textColor;
-  }
-  &__button {
-    width: 163px;
-    height: 54px;
-  }
-}*/
