@@ -22,7 +22,14 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-top: 3.5rem ;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  @include phones {
+    padding-left: 1.5625rem;
+    padding-right: 1.875rem;
+    padding-top: 3.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -34,6 +41,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
+    margin-bottom: 2rem;
   }
 }
 
@@ -46,6 +54,7 @@
     width: 8.125rem;
     height: 8.125rem;
     margin-bottom: 2rem;
+    margin-right: 0;
   }
 }
 
@@ -57,9 +66,6 @@
 
 .reviews__content {
   flex: 1;
-  padding-right: 6.6875rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 
   @include tablets {
     text-align: center;

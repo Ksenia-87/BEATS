@@ -206,7 +206,7 @@ footer {
 }
 
 .welcome {
-  /*background: url("../img/picture1100.png") left 75% center no-repeat;*/
+  background: url("../img/picture1100.png") left 80% center no-repeat;
   background-color: #F5F5F5;
   height: 100vh;
   min-height: 40.625rem;
@@ -243,12 +243,18 @@ footer {
 @media screen and (max-width: 768px) {
   .welcome__container {
     padding: 3.25rem 0 3.25rem 0;
+    background: url("../img/picture768.png") top 25% center no-repeat;
+  }
+}
+@media screen and (max-width: 480px) {
+  .welcome__container {
+    padding: 3.375rem 0 3.375rem 0;
+    background: url("../img/picture480.png") top 25% center no-repeat;
   }
 }
 
 .welcome__title-section {
   position: relative;
-  /*min-height: 18.75rem;*/
   width: 46%;
 }
 @media screen and (max-width: 768px) {
@@ -271,14 +277,8 @@ footer {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+    top: 25%;
   }
-}
-.welcome__title-section:before {
-  position: absolute;
-  content: url("../img/picture768.png") center no-repeat;
-  display: block;
-  width: 20.1875rem;
-  height: 20.1875rem;
 }
 
 .welcome__main-title {
@@ -293,7 +293,14 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .welcome__main-title {
-    width: 41.5625rem;
+    max-width: 41.5625rem;
+    margin-bottom: 0.3125rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .welcome__main-title {
+    max-width: 23.1875rem;
+    margin-bottom: 0.875rem;
   }
 }
 
@@ -310,19 +317,13 @@ footer {
 @media screen and (max-width: 768px) {
   .welcome__title-desc {
     width: 23.1875rem;
+    margin-bottom: 1.4375rem;
   }
 }
-
-.welcome__img {
-  position: absolute;
-  width: 30.5625rem;
-  height: 30.5625rem;
-  margin-left: 60%;
-  margin-top: 8%;
-}
-@media screen and (max-width: 768px) {
-  .welcome__img {
-    display: none;
+@media screen and (max-width: 480px) {
+  .welcome__title-desc {
+    width: 23.1875rem;
+    margin-bottom: 1.625rem;
   }
 }
 
@@ -447,11 +448,25 @@ footer {
   text-align: center;
   margin-bottom: 3.875rem;
 }
+@media screen and (max-width: 480px) {
+  .headline__subtitle {
+    padding: 0 5%;
+  }
+}
 
 .benefits {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media screen and (max-width: 480px) {
+  .benefits {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+  }
 }
 
 .benefits__item {
@@ -460,6 +475,12 @@ footer {
           flex: 1;
   padding: 0 3%;
   position: relative;
+}
+@media screen and (max-width: 480px) {
+  .benefits__item {
+    padding: 0;
+    margin-bottom: 2.3125rem;
+  }
 }
 .benefits__item:before {
   content: url(../img/decor.png);
@@ -487,6 +508,13 @@ footer {
 .benefit {
   text-align: center;
 }
+@media screen and (max-width: 480px) {
+  .benefit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 
 .benefit__image--wrapper {
   display: inline-block;
@@ -497,6 +525,12 @@ footer {
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 480px) {
+  .benefit__image--wrapper {
+    margin-bottom: 0;
+    margin-right: 0.75rem;
+  }
 }
 
 .benefit__icon {
@@ -529,6 +563,7 @@ footer {
   line-height: 1.1875rem;
   padding: 0 11%;
   text-decoration: none;
+  text-align: left;
 }
 
 .benefits-section {
@@ -585,7 +620,15 @@ footer {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-top: 3.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__display {
+    padding-left: 1.5625rem;
+    padding-right: 1.875rem;
+    padding-top: 3.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -607,6 +650,7 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 2rem;
   }
 }
 
@@ -620,6 +664,7 @@ footer {
     width: 8.125rem;
     height: 8.125rem;
     margin-bottom: 2rem;
+    margin-right: 0;
   }
 }
 
@@ -634,9 +679,6 @@ footer {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding-right: 6.6875rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 @media screen and (max-width: 768px) {
   .reviews__content {
@@ -735,11 +777,16 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .form {
-    padding: 11.25rem 19%;
+    padding: 0 19%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form {
+    padding: 0;
   }
 }
 
@@ -818,6 +865,13 @@ footer {
 }
 .form__controls:last-child {
   margin-bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .form__controls {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .form__btns {

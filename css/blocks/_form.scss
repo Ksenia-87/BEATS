@@ -3,8 +3,12 @@
   width: 100%;
 
   @include tablets {
-    padding: 11.25rem 19%;
+    padding: 0 19%;
     flex-direction: column;
+  }
+
+  @include phones {
+    padding: 0;
   }
 }
 
@@ -80,6 +84,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include phones {
+    justify-content: center;
   }
 }
 

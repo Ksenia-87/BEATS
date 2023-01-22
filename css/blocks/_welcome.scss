@@ -1,5 +1,5 @@
 .welcome {
-  /*background: url("../img/picture1100.png") left 75% center no-repeat;*/
+  background: url("../img/picture1100.png") left 80% center no-repeat;
   background-color: #F5F5F5;
   height: 100vh;
   min-height: 40.625rem;
@@ -28,12 +28,18 @@
 
   @include tablets {
     padding: 3.25rem 0 3.25rem 0;
+    background: url("../img/picture768.png") top 25%  center no-repeat;
   }
+
+  @include phones {
+    padding: 3.375rem 0 3.375rem 0;
+    background: url("../img/picture480.png") top 25%  center no-repeat;
+  }
+
 }
 
 .welcome__title-section {
   position: relative;
-  /*min-height: 18.75rem;*/
   width: 46%;
 
   @include tablets {
@@ -44,16 +50,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-
-  &:before {
-    position: absolute;
-    content: url("../img/picture768.png") center no-repeat;
-    display: block;
-    width: 20.1875rem;
-    height: 20.1875rem;
+    top: 25%;
   }
 }
+
 
 .welcome__main-title {
   color: $black;
@@ -66,7 +66,13 @@
   text-transform: uppercase;
 
   @include tablets {
-    width: 41.5625rem;
+    max-width: 41.5625rem;
+    margin-bottom: 0.3125rem;
+  }
+
+  @include phones {
+    max-width: 23.1875rem;
+    margin-bottom: 0.875rem;
   }
 }
 
@@ -82,18 +88,12 @@
 
   @include tablets {
     width: 23.1875rem;
+    margin-bottom: 1.4375rem;
   }
-}
 
-.welcome__img {
-  position: absolute;
-  width: 30.5625rem;
-  height: 30.5625rem;
-  margin-left: 60%/*40rem*/;
-  margin-top: 8%/*6.9375rem*/;
-
-  @include tablets {
-    display: none;
+  @include phones {
+    width: 23.1875rem;
+    margin-bottom: 1.625rem;
   }
 }
 
