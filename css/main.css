@@ -774,7 +774,7 @@ footer {
 
 .order-section {
   position: relative;
-  background: url("../img/order_background.png") center center #181818;
+  background: url(../img/order_background.png) center center/cover no-repeat #181818;
   color: #FFFFFF;
 }
 
