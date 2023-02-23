@@ -1,0 +1,85 @@
+$textColor: #292929;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.phone-number.header__phone-number {
+  @include tablets {
+    display: none;
+  }
+}
+
+.logo, .menu__list, .menu__items, .contacts {
+  display: inline-flex;
+}
+
+.beats_logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.logo {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin: 0 1.6875rem;
+  padding-top: 0.3125rem;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.menu__list {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu__item {
+  margin-right: 1.6875rem;
+  margin-bottom: 0.625rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__link {
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    white-space: nowrap;
+  }
+}
+
+.phone-number {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  display: flex;
+  align-items: center;
+}
+
+.phone-number__icon {
+  width: 0.86875rem;
+  height: 0.8625rem;
+  margin-right: 0.375rem;
+  flex-shrink: 0;
+}
+
+.phone-number__icon-elem {
+  width: 100%;
+}
+
+.phone-number__text {
+  white-space: nowrap;
+}

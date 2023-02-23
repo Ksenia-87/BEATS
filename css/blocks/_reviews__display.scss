@@ -1,3 +1,7 @@
+.reviews__main-title {
+  margin-bottom: rem(32px);
+}
+
 .reviews__display {
   background: #F8FAF9;
   padding: 2.625rem;
@@ -48,7 +52,7 @@
 .reviews__avatar {
   width: 15.8125rem;
   height: 16.5rem;
-  margin-right: 2.5rem;
+  margin-right: rem(37px);
 
   @include tablets {
     width: 8.125rem;
@@ -66,6 +70,8 @@
 
 .reviews__content {
   flex: 1;
+  padding-top: rem(33px);
+  min-width: rem(455px);
 
   @include tablets {
     text-align: center;

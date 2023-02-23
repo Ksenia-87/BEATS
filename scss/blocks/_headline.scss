@@ -1,0 +1,19 @@
+.headline__title {
+  margin-bottom: 1.125rem;
+  text-align: center; 
+}
+
+.headline__subtitle {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  padding: 0 26%;
+  text-align: center;
+  margin-bottom: 3.875rem;
+
+  @include phones {
+    padding: 0 5%;
+  }
+}

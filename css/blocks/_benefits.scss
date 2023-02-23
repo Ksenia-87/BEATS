@@ -18,10 +18,10 @@
   }
 
   &:before {
-    content: url(../img/decor.png);
+    content: url(../img/svg/decor.svg);
     position: absolute;
-    top: 1.875rem;
-    right: 0;
+    top: rem(60px);
+    right: rem(3px);
     transform: translateX(50%);
 
     @include tablets {

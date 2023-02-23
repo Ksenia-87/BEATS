@@ -3,7 +3,8 @@ $textColor: #292929;
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  padding-right: rem(25px);
 }
 
 .phone-number.header__phone-number {
@@ -28,8 +29,8 @@ $textColor: #292929;
 .menu {
   display: flex;
   align-items: center;
-  margin: 0 1.6875rem;
-  padding-top: 0.3125rem;
+  margin: 0 rem(27px);
+  padding-top: 0.625rem;
 
   @include tablets {
     display: none;

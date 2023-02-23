@@ -33,6 +33,14 @@
   transform: translate(-50%,- 50%);
 }
 
+.benefit__text {
+  text-align: center;
+
+  @include phones {
+    text-align: left;
+  }
+}
+
 .benefit__title {
   font-family: 'Play';
   font-style: normal;
@@ -50,7 +58,6 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.1875rem;
-  padding: 0 11%;
+  padding: 0 5%;
   text-decoration: none;
-  text-align: left;
 }

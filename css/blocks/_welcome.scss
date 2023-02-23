@@ -1,5 +1,5 @@
 .welcome {
-  background: url("../img/picture1100.png") left 80% center no-repeat;
+  background: url("../img/svg/headphones_main.svg") left 80% center no-repeat;
   background-color: #F5F5F5;
   height: 100vh;
   min-height: 40.625rem;
@@ -15,7 +15,7 @@
     position: absolute;
     bottom: -1.5625rem;
     right: 12%;  
-    content: url("../img/stick.png");
+    content: url("../img/svg/rectangle.svg");
   }
 }
 
@@ -28,12 +28,12 @@
 
   @include tablets {
     padding: 3.25rem 0 3.25rem 0;
-    background: url("../img/picture768.png") top 25%  center no-repeat;
+    background: url("../img/svg/headphones_main768.svg") top 25%  center no-repeat;
   }
 
   @include phones {
     padding: 3.375rem 0 3.375rem 0;
-    background: url("../img/picture480.png") top 25%  center no-repeat;
+    background: url("../img/svg/headphones_main768.svg") top 25%  center no-repeat;
   }
 
 }
@@ -58,7 +58,6 @@
 .welcome__main-title {
   color: $black;
   font-family: 'Play';
-  font-style: bold;
   font-weight: 700;
   font-size: 3rem;
   line-height: 3.25rem;

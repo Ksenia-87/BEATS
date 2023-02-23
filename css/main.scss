@@ -1,4 +1,4 @@
-$containerWidth: 1100px /*+ 20px*/;
+$containerWidth: 940px /*+ 20px*/;
 $baseFontSize: 16px;
 
 $black: #292929;
@@ -13,6 +13,7 @@ $phones: 480px;
 
 @import "./blocks/_media.scss";
 @import "./blocks/normalize.css";
+
 
 /*@import 'https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Open+Sans&family=Play:wght@400;700&display=swap';*/
 
@@ -35,4 +36,6 @@ $phones: 480px;
 @import "./blocks/_radio.scss";
 @import "./blocks/_fixed-menu.scss";
 @import "./blocks/_hamburger.scss";
-
+@import "./blocks/_contacts-section.scss";
+@import "./blocks/_footer.scss";
+@import "./blocks/_socials.scss";

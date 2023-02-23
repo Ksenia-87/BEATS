@@ -1,0 +1,39 @@
+.features {
+  display: flex;
+}
+
+.features__items {
+  margin-right: 18px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.feature {
+  display: flex;
+  max-width: 10.375rem;
+}
+
+.feature__icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-right: 0.75rem;
+}
+
+.feature__img {
+  width: 100%;
+}
+
+.feature__text {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  color: $black;
+  max-width: 7.125rem;
+}
+
+
+

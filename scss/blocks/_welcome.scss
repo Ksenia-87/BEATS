@@ -1,0 +1,120 @@
+.welcome {
+  background: url("../img/svg/headphones_main.svg") left 80% center no-repeat;
+  background-color: #F5F5F5;
+  height: 100vh;
+  min-height: 40.625rem;
+  color: $black;
+  position: relative;
+
+  @include tablets {
+    background: none;
+    background-color: #F5F5F5;
+  }
+
+  &:after {
+    position: absolute;
+    bottom: -1.5625rem;
+    right: 12%;  
+    content: url("../img/svg/rectangle.svg");
+  }
+}
+
+.welcome__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1.5rem 0 3.125rem 0;
+
+  @include tablets {
+    padding: 3.25rem 0 3.25rem 0;
+    background: url("../img/svg/headphones_main768.svg") top 25%  center no-repeat;
+  }
+
+  @include phones {
+    padding: 3.375rem 0 3.375rem 0;
+    background: url("../img/svg/headphones_main768.svg") top 25%  center no-repeat;
+  }
+
+}
+
+.welcome__title-section {
+  position: relative;
+  width: 46%;
+
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 25%;
+  }
+}
+
+
+.welcome__main-title {
+  color: $black;
+  font-family: 'Play';
+  font-style: bold;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.25rem;
+  margin-bottom: 1.375rem;
+  text-transform: uppercase;
+
+  @include tablets {
+    max-width: 41.5625rem;
+    margin-bottom: 0.3125rem;
+  }
+
+  @include phones {
+    max-width: 23.1875rem;
+    margin-bottom: 0.875rem;
+  }
+}
+
+.welcome__title-desc {
+  color: $black;
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.5625rem;
+  margin-bottom: 2.25rem;
+  width: 20.9375rem;
+
+  @include tablets {
+    width: 23.1875rem;
+    margin-bottom: 1.4375rem;
+  }
+
+  @include phones {
+    width: 23.1875rem;
+    margin-bottom: 1.625rem;
+  }
+}
+
+.welcome__spec-section {
+  @include tablets {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

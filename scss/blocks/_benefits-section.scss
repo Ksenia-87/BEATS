@@ -1,0 +1,10 @@
+.benefits-section {
+  position: relative;
+
+  &:before {
+    content: url("../img/triangle.png");
+    position: absolute;
+    bottom: -0.9375rem;
+    left: 5%;
+  }
+}

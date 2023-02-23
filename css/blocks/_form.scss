@@ -1,3 +1,7 @@
+.order-section__main-title {
+  margin-bottom: rem(58px);
+}
+
 .form {
   display: flex;
   width: 100%;
@@ -27,7 +31,11 @@
 
 .form__row {
   display: flex;
-  margin-bottom: 2.25rem;
+  margin-bottom: rem(13px);
+
+  &--textarea {
+    margin-bottom: rem(35px);
+  }
 }
 
 .form__block {
@@ -46,13 +54,13 @@
   font-size: 1rem;
   line-height: 1.1875rem;
   color: $white;
-  margin-bottom: 0.1875rem;
+  margin-bottom: rem(4px);
 }
 
 .form__input {
   width: 100%;
   border: none;
-  padding: 1.125rem 1.333rem;
+  padding: rem(16px) rem(16px);
   border: 0.1875rem solid transparent;
   border-radius: 0.25rem; 
   font-family: 'Open Sans';
@@ -65,7 +73,7 @@
   &--textarea {
     height: 9.5rem;
     resize: none;
-    margin-bottom: 2.625rem;
+  
     @include tablets {
 
     }
@@ -93,6 +101,13 @@
 
 .form__btns {
   display: flex;
-  justify-content: center;
   margin-top: 3rem;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.form__btn-clear {
+  margin-left: rem(10px);
 }
