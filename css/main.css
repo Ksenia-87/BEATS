@@ -965,6 +965,7 @@ footer {
   position: fixed;
   top: 40%;
   right: 3%;
+  z-index: 100;
 }
 @media screen and (max-width: 768px) {
   .fixed-menu {

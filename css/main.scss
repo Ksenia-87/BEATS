@@ -10,6 +10,7 @@ $white: #FFFFFF;
 $tablets: 768px;
 $phones: 480px; 
 
+$z-fixed-menu: 100;
 
 @import "./blocks/_media.scss";
 @import "./blocks/normalize.css";
