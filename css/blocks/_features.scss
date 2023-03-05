@@ -14,14 +14,10 @@
   display: flex;
 }
 
-.feature__icon {
+.feature__icon--img {
   width: rem(40px);
   height: rem(40px);
   margin-right: rem(11px);
-}
-
-.feature__img {
-  width: 100%;
 }
 
 .feature__text {

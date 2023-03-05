@@ -26,20 +26,20 @@
   height: 100%;
   padding: 1.5rem 0 3.125rem 0;
 
-  @include tablets {
+  /*@include tablets {
     padding: 3.25rem 0 3.25rem 0;
-    background: url("../img/svg/headphones_main768.svg") top 25%  center no-repeat;
+    background: url("../img/svg/headphones_main768.svg") top 32%  center no-repeat;
   }
 
   @include phones {
     padding: 3.375rem 0 3.375rem 0;
     background: url("../img/svg/headphones_main768.svg") top 25%  center no-repeat;
-  }
+  }*/
 
 }
 
 .welcome__title-section {
-  position: relative;
+  /*position: relative;*/
   width: 46%;
 
   @include tablets {
@@ -50,8 +50,16 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    top: 25%;
-  }
+    top: 21%;
+   }
+
+  &:before {
+    content: "";
+    width: rem(323px);
+    height: rem(323px);
+    background: url("../img/svg/headphones_main768.svg") center center / contain no-repeat;
+    margin-bottom: rem(49px);
+  } 
 }
 
 
@@ -61,7 +69,7 @@
   font-weight: 700;
   font-size: 3rem;
   line-height: 3.25rem;
-  margin-bottom: 1.375rem;
+  margin-bottom: rem(5px);
   text-transform: uppercase;
 
   @include tablets {
@@ -70,7 +78,7 @@
   }
 
   @include phones {
-    max-width: 23.1875rem;
+    max-width: 21.1875rem;
     margin-bottom: 0.875rem;
   }
 }
@@ -86,7 +94,7 @@
   width: 20.9375rem;
 
   @include tablets {
-    width: 23.1875rem;
+    max-width: 23.1875rem;
     margin-bottom: 1.4375rem;
   }
 

@@ -1,5 +1,12 @@
 .order-section__main-title {
   margin-bottom: rem(58px);
+
+  @include phones {
+    margin-bottom: rem(63px);
+    font-weight: 700;
+    font-size: rem(32px);
+    line-height: rem(36px);
+  }
 }
 
 .form {
@@ -35,7 +42,7 @@
 
   &--textarea {
     margin-bottom: rem(35px);
-  }
+  }  
 }
 
 .form__block {
@@ -70,12 +77,28 @@
   line-height: 1.25rem;
   color: #000000;
 
+  @include tablets {
+    height: rem(36px);
+    resize: none;
+  }
+
+  @include phones {
+    height: rem(36px);
+    resize: none;
+  } 
+
   &--textarea {
     height: 9.5rem;
     resize: none;
-  
-    @include tablets {
 
+    @include tablets {
+      height: rem(82px);
+      resize: none;
+    }
+
+    @include phones {
+      height: rem(82px);
+      resize: none;
     }
   }
 
@@ -83,7 +106,7 @@
     border-color: $red;
     outline: none;
   }
-}
+}  
 
 .form__controls {
   display: flex;

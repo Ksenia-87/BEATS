@@ -8,3 +8,12 @@
     left: 5%;
   }
 }
+
+.headline__title {
+  @include phones {
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(32px);
+    line-height: rem(36px);
+  }
+}

@@ -1,5 +1,12 @@
 .reviews__main-title {
   margin-bottom: rem(32px);
+
+  @include phones {
+    weight: 700;
+    size: rem(32px);
+    line-height: rem(36px);
+    margin-bottom: rem(26px);
+  }
 }
 
 .reviews__display {
@@ -20,6 +27,10 @@
     left: 50%;
     transform: translateX(-50%);
     top: -3.8125rem;
+
+    @include phones {
+      display: none;
+    }
   }
 
   @include tablets {
@@ -34,6 +45,8 @@
     padding-right: 1.875rem;
     padding-top: 3.5rem;
     padding-bottom: 1.5rem;
+    height: rem(451px);
+    margin-bottom: rem(44px);
   }
 }
 
@@ -60,6 +73,13 @@
     margin-bottom: 2rem;
     margin-right: 0;
   }
+
+  @include phones {
+    width: 8.125rem;
+    height: 8.125rem;
+    margin-bottom: rem(21px);
+    margin-right: 0;
+  }
 }
 
 .reviews__avatar-img {
@@ -75,6 +95,7 @@
 
   @include tablets {
     text-align: center;
+
   }
 }
 
@@ -103,7 +124,12 @@
   /*width: 31.125rem;*/
 
   @include tablets {
-    width: 42.3125rem;
+    /*width: 42.3125rem;*/
+    padding: 0;
+  }
+
+  @include phones {
+    padding: 0 5%;
   }
 }
 
