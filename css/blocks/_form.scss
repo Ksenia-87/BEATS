@@ -1,8 +1,12 @@
 .order-section__main-title {
-  margin-bottom: rem(58px);
+  margin-bottom: rem(83px);
+
+  @include tablets {
+    margin-bottom: rem(54px);
+  }
 
   @include phones {
-    margin-bottom: rem(63px);
+    margin-bottom: rem(40px);
     font-weight: 700;
     font-size: rem(32px);
     line-height: rem(36px);
@@ -14,7 +18,8 @@
   width: 100%;
 
   @include tablets {
-    padding: 0 19%;
+    max-width: 468px;
+    margin: 0 auto;
     flex-direction: column;
   }
 
@@ -34,6 +39,10 @@
   @include tablets {
     margin-right: 0;
   }
+
+  @include phones {
+    margin-right: 0;
+  }
 }
 
 .form__row {
@@ -42,16 +51,28 @@
 
   &--textarea {
     margin-bottom: rem(35px);
+
+    @include tablets {
+      margin-bottom: rem(20px);
+    }
   }  
 }
 
 .form__block {
   flex: 1;
-  margin-right: 1rem;
+  margin-right: rem(16px);
 
+  @include tablets {
+    margin-right: rem(23px);
+  }
+
+  @include phones {
+    margin-right: rem(19px);
+  }
+   
   &:last-child {
     margin-right: 0;
-  }
+  } 
 }
 
 .form__title {
@@ -99,6 +120,7 @@
     @include phones {
       height: rem(82px);
       resize: none;
+      margin-bottom: rem(9px);
     }
   }
 
@@ -111,20 +133,25 @@
 .form__controls {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+  margin-bottom: rem(24px);
 
   &:last-child {
     margin-bottom: 0;
   }
 
+  @include tablets {
+    margin-bottom: rem(29px);
+  }
+
   @include phones {
     justify-content: center;
+    margin-bottom: rem(19px);
   }
 }
 
 .form__btns {
   display: flex;
-  margin-top: 3rem;
+  margin-top: rem(40px);
 
   @include tablets {
     justify-content: center;

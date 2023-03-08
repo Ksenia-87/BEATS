@@ -50,7 +50,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    top: 21%;
+   }
+
+   @include phones {
+    margin-top: rem(19px);
    }
 
   &:before {
@@ -69,7 +72,7 @@
   font-weight: 700;
   font-size: 3rem;
   line-height: 3.25rem;
-  margin-bottom: rem(5px);
+  margin-bottom: rem(22px);
   text-transform: uppercase;
 
   @include tablets {
@@ -78,8 +81,10 @@
   }
 
   @include phones {
+    font-size: rem(32px);
+    line-height: rem(36px);
     max-width: 21.1875rem;
-    margin-bottom: 0.875rem;
+    margin-bottom: rem(14px);
   }
 }
 
@@ -99,8 +104,11 @@
   }
 
   @include phones {
-    width: 23.1875rem;
-    margin-bottom: 1.625rem;
+    max-width: rem(342px);
+    font-size: rem(18px);
+    line-height: rem(20px);
+    margin-bottom: rem(26px);
+    font-family: 'Play';
   }
 }
 

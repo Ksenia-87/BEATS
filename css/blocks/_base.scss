@@ -3,8 +3,12 @@ html {
 	height: 100%;
 }
 
-.html {
+html {
 	font-size: $baseFontSize;
+
+	@include phones {
+		font-size: 3.3333333vmin;
+	}
 }
 
 body {

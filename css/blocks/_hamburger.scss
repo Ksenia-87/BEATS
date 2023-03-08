@@ -8,6 +8,10 @@
   @include tablets {
     display: inline-flex;
   }
+
+  @include phones {
+    
+  }
 }
 
 .hamburger__plank {
