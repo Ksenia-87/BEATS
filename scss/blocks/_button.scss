@@ -4,12 +4,12 @@
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.125rem; 
-  width: 10.1875rem;
   padding: 1.125rem 2.5625rem;
   text-transform: uppercase;
   border-radius: 6.25rem;
   border: none;
   cursor: pointer;
+  display: inline-flex;
 
   &--red {
     background: $red;
@@ -20,7 +20,7 @@
     background: transparent;
     color: $white;
     text-transform: none;
-    margin-left: 0.9375rem;
+    padding: 0 rem(4px);
 
     @include tablets {
       color: $red;

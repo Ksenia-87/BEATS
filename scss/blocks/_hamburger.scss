@@ -1,6 +1,6 @@
 .hamburger {
-  width: 26.11px;
-  height: 15.1px;
+  width: rem(26px);
+  height: rem(24px);
   flex-direction: column;
   justify-content: space-between;
   display: none;
@@ -8,14 +8,18 @@
   @include tablets {
     display: inline-flex;
   }
+
+  @include phones {
+    
+  }
 }
 
 .hamburger__plank {
   display: block;
   background: $black;
-  height: 4.44px;
-  border-radius: 10px;
-  margin-bottom: 5.33px;
+  height: rem(4.5px);
+  border-radius: rem(10px);
+  margin-bottom: rem(5.35px);
 
   &:last-child {
     margin-bottom: 0;
