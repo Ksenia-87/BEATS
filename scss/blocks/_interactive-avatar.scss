@@ -1,11 +1,21 @@
 .interactive-avatar {
-  width: 4.625rem;
-  height: 4.625rem;
-  border: 0.25rem solid transparent;
+  width: rem(74px);
+  height: rem(74px);
+  border: rem(4px) solid transparent;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  margin-right: 0.375rem;
+  margin-right: rem(6px);
+
+  @include tablets {
+    width: rem(73px);
+    height: rem(73px);
+  }
+
+  @include phones {
+    width: rem(64px);
+    height: rem(64px);
+  }
 
   &--active {
     border-color: #E01F3D;

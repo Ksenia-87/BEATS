@@ -3,15 +3,11 @@ html {
 	height: 100%;
 }
 
-.html {
+html {
 	font-size: $baseFontSize;
 
-	@include tablets {
-		font-size: $baseFontSize - 1px;
-	}
-
 	@include phones {
-		font-size: $baseFontSize - 2px;
+		font-size: 3.3333333vmin;
 	}
 }
 
@@ -19,11 +15,11 @@ body {
 	font-family: 'Alegreya Sans', sans-serif;
 	font-family: 'Open Sans', sans-serif;
 	font-family: 'Play', sans-serif;
-	font-size: $baseFontSize;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: #666666;
 	position: relative;
+	margin: 0;
 }
 
 .wrapper {
