@@ -1,8 +1,8 @@
 .order-section__main-title {
-  margin-bottom: rem(83px);
+  margin-bottom: rem(60px);
 
   @include tablets {
-    margin-bottom: rem(54px);
+    margin-bottom: rem(35px);
   }
 
   @include phones {
@@ -133,7 +133,7 @@
 .form__controls {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: rem(24px);
+  margin-bottom: rem(20px);
 
   &:last-child {
     margin-bottom: 0;
@@ -151,10 +151,11 @@
 
 .form__btns {
   display: flex;
-  margin-top: rem(40px);
+  margin-top: rem(48px);
 
   @include tablets {
     justify-content: center;
+    margin-top: rem(38px);
   }
 }
 

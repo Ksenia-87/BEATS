@@ -46,18 +46,30 @@
   margin-bottom: 0.3125rem;
 
   @include tablets {
-    font-size: rem(24px);
-  line-height: rem(28px);
+    font-weight: 400;
+    font-size: rem(21px);
+    line-height: rem(24px);
   }
 
   @include phones {
     margin-bottom: rem(12px);
-   /* margin-right: rem(20px);*/
+    font-size: rem(18px);
+    line-height: rem(24px);
   }
 }
 
 .footer__phone-number {
   display: flex;
+
+  @include tablets {
+    font-size: rem(18px);
+    line-height: rem(21px);
+  }
+
+  @include phones {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 .phone-number__img {

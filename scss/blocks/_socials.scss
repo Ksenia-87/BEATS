@@ -24,6 +24,10 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @include phones {
+    margin-right: rem(14px);
+  }
 }
 
 .socail__img {
@@ -32,7 +36,12 @@
 
   @include tablets {
     width: rem(32px);
-  height: rem(32px);
+    height: rem(32px);
+  }
+
+  @include phones {
+    width: rem(24px);
+    height: rem(24px);
   }
 
   &:hover {
