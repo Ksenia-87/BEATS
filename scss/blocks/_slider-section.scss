@@ -9,60 +9,133 @@
   &:after {
     position: absolute;
     bottom: -1.5625rem;
-    right: 10%;  
+    right: 9%;  
     content: url("../img/svg/black_square.svg");
   }
 
   @include tablets {
-    padding: rem(93px) rem(88px) rem(132px);
+    padding: rem(93px) rem(55px) rem(132px);
   }
+
+  @include phones {
+    padding: rem(71px) rem(32px) rem(131px);
+  } 
 }
 
 .slider__container {
   height: 100%;
   display: flex;
-  /*justify-content: space-between;*/
   align-items: center;
-}
 
-.arrow__left {
-  margin-right: rem(33px);
-}
+  @include tablets {
+    flex-direction: column;
+  }
 
-.arrow__right { 
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .slider__pagin-left, .slider__pagin-right {
   max-width: rem(13.5px);
   max-height: rem(27px);
+  position: absolute;
+  bottom: 48%;
+
+  @include tablets {
+    bottom: 69%;
+  }
+
+  @include phones {
+    bottom: 73%;
+  }
+}
+
+.slider__pagin-left {
+  left: -5%;
+
+  @include tablets {
+    left: 13%;
+  }
+
+  @include phones {
+    left: -7%;
+  }
+}
+
+.slider__pagin-right {
+  right: 1%;
+
+  @include tablets {
+    right: 14%;
+  }
+
+  @include phones {
+    right: -7%;
+  }
 }
 
 .slider__image {
   width: rem(450px);
   height: rem(450px);
-  margin-right: rem(59px);
+  margin-right: rem(60px);
   
+  @include tablets {
+    width: rem(306px);
+    height: rem(306px);
+    margin-right: 0;
+    margin-bottom: rem(49px);
+    }
+  
+  @include phones {
+    width: rem(306px);
+    height: rem(306px);
+    margin-right: 0;
+    margin-bottom: rem(26px);
+    }
 }
 
 .slider__info {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 44%;
+  max-height: 60%;
+  margin-bottom: rem(80px);
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .slider__title-section {
   display: flex;
   flex-direction: column;
   height: 60%;
+
+  @include tablets {
+    height: auto;
+  }
+
+  @include phones {
+    height: auto;
+  }
 }
 
 .slider__menu {
   position: relative;
   display: flex;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .slider__menu:hover .characteristics {
-  display: block;
+  display: flex;
 	pointer-events: all;
 	cursor: pointer;
 }
@@ -140,40 +213,73 @@
   transform: translate(-50%,- 50%);
 }
 
-
-
-
-
-
-
-
 .slider__main-title {
   font-weight: 700;
   font-size: rem(36px);
   line-height: rem(42px);
   text-transform: uppercase;
   margin-bottom: rem(24px);
+
+  @include tablets {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: rem(14px);
+    text-align: center;
+  }
+
+  @include phones {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: rem(13px);
+    text-align: center;
+  }
 }
 
 .slider__title-desc {
+  display: flex;
   font-weight: 400;
   font-size: rem(16px);
   line-height: rem(19px);
   margin-bottom: rem(27px);
   padding: 0 10% 0 0 ;
+
+  @include tablets {
+    text-align: center;
+    padding: 0;
+    margin-bottom: rem(28px);
+  }
+
+  @include phones {
+    text-align: center;
+    padding: 0;
+    width: rem(412px);
+    margin-bottom: rem(24px);
+  }
 }
 
 .spec__list {
   display: flex;
-  flex-direction: column;
-  margin-bottom: rem(24px);
+  flex-direction: column;  
+  margin-bottom: rem(28px);
+
+  @include tablets {
+    margin-left: 30%;
+    margin-bottom: rem(26px);
+  }
+
+  @include phones {
+    margin-left: 18%;
+    margin-bottom: rem(22px);
+  }  
 }
 
 .spec__text {
   font-weight: 400;
   font-size: rem(16px);
   line-height: rem(19px);
-  margin-right: rem(86px);
+  margin-right: rem(82px);
 
   &:last-child {
     margin-right: 0;
@@ -184,7 +290,7 @@
   font-weight: 700;
   font-size: rem(18px);
   line-height: rem(21px);
-  margin-right: rem(94px);
+  margin-right: rem(90px);
 
   &:last-child {
     margin-right: 0;
@@ -195,20 +301,28 @@
   display: flex;
   flex-direction: row-reverse;
   align-self: flex-start;
+
+  @include tablets {
+    align-self: center;
+  }
 }
 
 .slider__price, .button--slider {
   display: inline-flex;
 }
 
-.button--slider {
-  
-}
-
 .slider__price {
   font-weight: 400;
   font-size: rem(36px);
   line-height: rem(60px);
-  margin-right: rem(15px);
+  margin-right: rem(18px);
+
+  @include tablets {
+    margin-right: rem(35px);
+  }
+
+  @include phones {
+    margin-right: rem(20px);
+  }
 }
 
