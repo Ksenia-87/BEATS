@@ -163,11 +163,16 @@ footer {
     background-color: #313131;
     -webkit-transition: left 0.3s;
     transition: left 0.3s;
+    padding: 20% 28% 30%;
   }
 }
 .menu--active {
-  left: 0;
-  padding: 20% 28% 30%;
+  left: 0%;
+}
+@media screen and (max-width: 480px) {
+  .menu {
+    padding: 1% 15% 16%;
+  }
 }
 
 .menu__list {
@@ -200,7 +205,12 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .menu__item {
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.875rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu__item {
+    margin-bottom: auto;
   }
 }
 .menu__item__link {

@@ -45,11 +45,15 @@ $textColor: #292929;
     align-items: center;
     background-color: #313131;
     transition: left .3s;
+    padding: 20% 28% 30%;
   }
 
   &--active {
-    left: 0;
-    padding: 20% 28% 30%;
+    left: 0%;
+  }
+
+  @include phones {
+    padding: 1% 15% 16%;
   }
 }
 
@@ -76,7 +80,11 @@ $textColor: #292929;
   }
 
   @include tablets {
-    margin-bottom: rem(10px);
+    margin-bottom: rem(14px);
+  }
+
+  @include phones {
+    margin-bottom: auto;
   }
 
   &__link {
