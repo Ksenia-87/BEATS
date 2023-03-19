@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
-  <body>
+  <body class="body">
     <div class="wrapper">
       <div class="wrapper__content">
         <section class="welcome">
@@ -22,7 +22,7 @@
                   <use xlink:href="./img/svg/sprite.svg#logo"></use>
                 </svg>
               </a>             
-              <nav class="menu menu--active">
+              <nav class="menu">
                 <ul class="menu__list">
                   <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
                   <li class="menu__item"><a href="#" class="menu__link">Наушники</a></li>
@@ -41,14 +41,14 @@
                 </span>
                 <span class="phone-number__text">8 800 903 90 90</span>
               </a>
-              <a href="#" class="hamburger hamburger--active" id="hamburger">
+              <a href="#" class="hamburger" id="hamburger">
                 <span class="hamburger__plank"></span>
                 <span class="hamburger__plank"></span>
                 <span class="hamburger__plank"></span>
               </a>
             </header>
             <div class="welcome__title-section">          
-              <h1 class="welcome__main-title">Беспроводные<br>наушники Beats Solo 3</h1>
+              <h1 class="welcome__main-title">Беспроводные наушники Beats Solo 3</h1>
               <div class="welcome__title-desc">Встречайте новую версию наушников из линейки Powerbeats.</div>
               <a href="#" class="button button--red">ЗАКАЗАТЬ</a>
             </div>
@@ -133,10 +133,10 @@
             </ul>
           </div>
         </section> 
-        <section class ="section slider-section">
+        <section class ="section slider">
           <div class="container slider__container">
-            <a class="arrow__left" id="left" href="#">
-              <svg class="slider__pagin-left">
+            <a class="slider__arrow slider__arrow--left" id="left" href="#">
+              <svg class="slider__arrow-icon">
                 <use xlink:href="./img/svg/sprite.svg#left"></use>
               </svg>
             </a>
@@ -154,50 +154,46 @@
                     </div>
                   </a>
                   <div class="characteristics">
-                    <ul class="characteristics__img">
-                      <li class="characteristics__img-item">
+                    <ul class="characteristics__list">
+                      <li class="characteristics__item">
                         <svg class="characteristics__icon">
                           <use xlink:href="./img/svg/sprite.svg#bluetooth"></use>
                         </svg>
+                        <div class="characteristics__text">Bluetooth</div>
+                        <div class="characteristics__value">4.0</div>
                       </li>
-                      <li class="characteristics__img-item">
+                      <li class="characteristics__item">
                         <svg class="characteristics__icon">
                           <use xlink:href="./img/svg/sprite.svg#dist"></use>
                         </svg>
+                        <div class="characteristics__text">Дальность</div>
+                        <div class="characteristics__value">12 м</div>
                       </li>
-                      <li class="characteristics__img-item">
+                      <li class="characteristics__item">
                         <svg class="characteristics__icon">
                           <use xlink:href="./img/svg/sprite.svg#plugslider"></use>
                         </svg>
+                        <div class="characteristics__text">Зарядка</div>
+                        <div class="characteristics__value">3 ч</div>
                       </li>
-                      <li class="characteristics__img-item">
+                      <li class="characteristics__item">
                         <svg class="characteristics__icon">
                           <use xlink:href="./img/svg/sprite.svg#kg"></use>
                         </svg>
+                        <div class="characteristics__text">Вес</div>
+                        <div class="characteristics__value">215гр</div>
                       </li>
-                      <li class="characteristics__img-item">
+                      <li class="characteristics__item">
                         <svg class="characteristics__icon">
                           <use xlink:href="./img/svg/sprite.svg#patent"></use>
                         </svg>
+                        <div class="characteristics__text">Гарантия</div>
+                        <div class="characteristics__value">1 год</div>
                       </li>
-                    </ul>
-                    <ul class="characteristics__title">
-                      <li class="characteristics__title-item">Bluetooth</li>
-                      <li class="characteristics__title-item">Дальность </li>
-                      <li class="characteristics__title-item">Зарядка</li>
-                      <li class="characteristics__title-item">Вес</li>
-                      <li class="characteristics__title-item">Гарантия</li>
-                    </ul>
-                    <ul class="characteristics__value">
-                      <li class="characteristics__value-item">4.0</li>
-                      <li class="characteristics__value-item">12 м</li>
-                      <li class="characteristics__value-item">3 ч</li>
-                      <li class="characteristics__value-item">215гр</li>
-                      <li class="characteristics__value-item">1 год</li>
                     </ul>
                   </div>
                 </div>
-                <h1 class="slider__main-title">beats solo 3. цвет «атласное серебро»</h1>
+                <h2 class="slider__main-title">beats solo 3. цвет &nbsp;«атласное серебро»</h2>
                 <div class="slider__title-desc">Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.</div>
                 <ul class="spec__list">
                   <li class="spec__item">
@@ -215,8 +211,8 @@
                 <div class="slider__price">14 990 ₽</div>
               </div>
             </div>
-            <a class="arrow__right" id="right" href="#">
-              <svg class="slider__pagin-right">
+            <a class="slider__arrow slider__arrow--right" id="right" href="#">
+              <svg class="slider__arrow-icon">
                 <use xlink:href="./img/svg/sprite.svg#right"></use>
               </svg>
             </a>

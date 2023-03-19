@@ -22,6 +22,12 @@ body {
 	margin: 0;
 }
 
+.body {
+	 &--active-menu {
+		overflow: hidden;
+	 }
+}
+
 .wrapper {
 	position: relative;
 	/*overflow: hidden;*/
