@@ -8,7 +8,6 @@ $textColor: #292929;
 
   @include phones {
     padding-right: 0;
-
   }
 }
 
@@ -20,10 +19,6 @@ $textColor: #292929;
 
 .beats__logo, .menu__list, .menu__items {
   display: inline-flex;
-}
-
-.beats__logo {
-  
 }
 
 .beats__logo--img {
@@ -39,13 +34,37 @@ $textColor: #292929;
   padding-top: 0.625rem;
 
   @include tablets {
-    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: -110%;
+    top: 0;
+    display: flex;
+    z-index: 4;
+    justify-content: center;
+    align-items: center;
+    background-color: #313131;
+    transition: left .3s;
+  }
+
+  &--active {
+    left: 0;
+    padding: 20% 28% 30%;
   }
 }
 
 .menu__list {
   flex-wrap: wrap;
   justify-content: center;
+
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+    font-weight: 400;
+    font-size: rem(36px);
+    line-height: rem(72px);
+    color: $white;
+  }
 }
 
 .menu__item {
@@ -54,6 +73,10 @@ $textColor: #292929;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include tablets {
+    margin-bottom: rem(10px);
   }
 
   &__link {
