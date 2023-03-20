@@ -211,6 +211,7 @@ footer {
 @media screen and (max-width: 768px) {
   .menu__item {
     margin-bottom: 0.875rem;
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 480px) {
@@ -948,7 +949,7 @@ footer {
 }
 
 .characteristics__value {
-  margin-right: auto;
+  margin-left: auto;
 }
 
 .slider__menu-tool {
@@ -1880,7 +1881,6 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .social {
-    margin-top: 1.25rem;
     -webkit-transform: initial;
             transform: initial;
   }

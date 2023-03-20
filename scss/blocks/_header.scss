@@ -82,6 +82,7 @@ $textColor: #292929;
 
   @include tablets {
     margin-bottom: rem(14px);
+    margin-right: 0;
   }
 
   @include phones {
