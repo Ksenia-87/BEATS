@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Play:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -140,76 +141,155 @@
                 <use xlink:href="./img/svg/sprite.svg#left"></use>
               </svg>
             </a>
-            <div class="slider__image">
-              <img src="./img/svg/headphones_slider_main.svg" alt="headphones slider" class="slider__main-img">
-            </div>
-            <div class="slider__info">
-              <div class="slider__title-section">
-                <div class="slider__menu">
-                  <a class="slider__menu-link" href="#">
-                    <div class="slider__menu-tool">
-                      <svg class="slider__menu-icon">
-                        <use xlink:href="./img/svg/sprite.svg#tool"></use>
-                      </svg>
-                    </div>
-                  </a>
-                  <div class="characteristics">
-                    <ul class="characteristics__list">
-                      <li class="characteristics__item">
-                        <svg class="characteristics__icon">
-                          <use xlink:href="./img/svg/sprite.svg#bluetooth"></use>
-                        </svg>
-                        <div class="characteristics__text">Bluetooth</div>
-                        <div class="characteristics__value">4.0</div>
-                      </li>
-                      <li class="characteristics__item">
-                        <svg class="characteristics__icon">
-                          <use xlink:href="./img/svg/sprite.svg#dist"></use>
-                        </svg>
-                        <div class="characteristics__text">Дальность</div>
-                        <div class="characteristics__value">12 м</div>
-                      </li>
-                      <li class="characteristics__item">
-                        <svg class="characteristics__icon">
-                          <use xlink:href="./img/svg/sprite.svg#plugslider"></use>
-                        </svg>
-                        <div class="characteristics__text">Зарядка</div>
-                        <div class="characteristics__value">3 ч</div>
-                      </li>
-                      <li class="characteristics__item">
-                        <svg class="characteristics__icon">
-                          <use xlink:href="./img/svg/sprite.svg#kg"></use>
-                        </svg>
-                        <div class="characteristics__text">Вес</div>
-                        <div class="characteristics__value">215гр</div>
-                      </li>
-                      <li class="characteristics__item">
-                        <svg class="characteristics__icon">
-                          <use xlink:href="./img/svg/sprite.svg#patent"></use>
-                        </svg>
-                        <div class="characteristics__text">Гарантия</div>
-                        <div class="characteristics__value">1 год</div>
-                      </li>
-                    </ul>
+            <div class="slider__wrapper">
+              <ul class="slider__list">
+                <li class="slider__slide-item">
+                  <div class="slider__image">
+                    <img src="./img/headphones_slider_1100.png" alt="headphones slider" class="slider__main-img">
                   </div>
-                </div>
-                <h2 class="slider__main-title">beats solo 3. цвет &nbsp;«атласное серебро»</h2>
-                <div class="slider__title-desc">Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.</div>
-                <ul class="spec__list">
-                  <li class="spec__item">
-                    <span class="spec__text">Зарядка</span>
-                    <span class="spec__text">Вес</span>
-                  </li>
-                  <li class="spec__item--bold">
-                    <span class="spec__text spec__text--bold">2  часа</span>
-                    <span class="spec__text spec__text--bold">215 грамм</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="slider__order">
-                <a href="#" class="button button--red button--slider">ЗАКАЗАТЬ</a>
-                <div class="slider__price">14 990 ₽</div>
-              </div>
+                  <div class="slider__info">
+                    <div class="slider__title-section">
+                      <div class="slider__menu">
+                        <a class="slider__menu-link" href="#">
+                          <div class="slider__menu-tool">
+                            <svg class="slider__menu-icon">
+                              <use xlink:href="./img/svg/sprite.svg#tool"></use>
+                            </svg>
+                          </div>
+                        </a>
+                        <div class="characteristics">
+                          <ul class="characteristics__list">
+                            <li class="characteristics__item">
+                              <svg class="characteristics__icon">
+                                <use xlink:href="./img/svg/sprite.svg#bluetooth"></use>
+                              </svg>
+                              <div class="characteristics__text">Bluetooth</div>
+                              <div class="characteristics__value">4.0</div>
+                            </li>
+                            <li class="characteristics__item">
+                              <svg class="characteristics__icon">
+                                <use xlink:href="./img/svg/sprite.svg#dist"></use>
+                              </svg>
+                              <div class="characteristics__text">Дальность</div>
+                              <div class="characteristics__value">12 м</div>
+                            </li>
+                            <li class="characteristics__item">
+                              <svg class="characteristics__icon">
+                                <use xlink:href="./img/svg/sprite.svg#plugslider"></use>
+                              </svg>
+                              <div class="characteristics__text">Зарядка</div>
+                              <div class="characteristics__value">3 ч</div>
+                            </li>
+                            <li class="characteristics__item">
+                              <svg class="characteristics__icon">
+                                <use xlink:href="./img/svg/sprite.svg#kg"></use>
+                              </svg>
+                              <div class="characteristics__text">Вес</div>
+                              <div class="characteristics__value">215гр</div>
+                            </li>
+                            <li class="characteristics__item">
+                              <svg class="characteristics__icon">
+                                <use xlink:href="./img/svg/sprite.svg#patent"></use>
+                              </svg>
+                              <div class="characteristics__text">Гарантия</div>
+                              <div class="characteristics__value">1 год</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h2 class="slider__main-title">beats solo 3. цвет &nbsp;«атласное серебро»</h2>
+                      <div class="slider__title-desc">Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.</div>
+                      <ul class="spec__list">
+                        <li class="spec__item">
+                          <span class="spec__text">Зарядка</span>
+                          <span class="spec__text">Вес</span>
+                        </li>
+                        <li class="spec__item--bold">
+                          <span class="spec__text spec__text--bold">2  часа</span>
+                          <span class="spec__text spec__text--bold">215 грамм</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="slider__order">
+                      <a href="#" class="button button--red button--slider">ЗАКАЗАТЬ</a>
+                      <div class="slider__price">14 990 ₽</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__slide-item">
+                  <div class="slider__image">
+                    <img src="./img/headphones_slider_red_1100.png" alt="headphones slider" class="slider__main-img">
+                  </div>
+                  <div class="slider__info">
+                    <div class="slider__title-section">
+                      <div class="slider__menu">
+                        <a class="slider__menu-link" href="#">
+                          <div class="slider__menu-tool">
+                            <svg class="slider__menu-icon">
+                              <use xlink:href="./img/svg/sprite.svg#tool"></use>
+                            </svg>
+                          </div>
+                        </a>
+                        <div class="characteristics">
+                          <ul class="characteristics__list">
+                            <li class="characteristics__item">
+                              <svg class="characteristics__icon">
+                                <use xlink:href="./img/svg/sprite.svg#bluetooth"></use>
+                              </svg>
+                              <div class="characteristics__text">Bluetooth</div>
+                              <div class="characteristics__value">4.0</div>
+                            </li>
+                            <li class="characteristics__item">
+                              <svg class="characteristics__icon">
+                                <use xlink:href="./img/svg/sprite.svg#dist"></use>
+                              </svg>
+                              <div class="characteristics__text">Дальность</div>
+                              <div class="characteristics__value">12 м</div>
+                            </li>
+                            <li class="characteristics__item">
+                              <svg class="characteristics__icon">
+                                <use xlink:href="./img/svg/sprite.svg#plugslider"></use>
+                              </svg>
+                              <div class="characteristics__text">Зарядка</div>
+                              <div class="characteristics__value">3 ч</div>
+                            </li>
+                            <li class="characteristics__item">
+                              <svg class="characteristics__icon">
+                                <use xlink:href="./img/svg/sprite.svg#kg"></use>
+                              </svg>
+                              <div class="characteristics__text">Вес</div>
+                              <div class="characteristics__value">215гр</div>
+                            </li>
+                            <li class="characteristics__item">
+                              <svg class="characteristics__icon">
+                                <use xlink:href="./img/svg/sprite.svg#patent"></use>
+                              </svg>
+                              <div class="characteristics__text">Гарантия</div>
+                              <div class="characteristics__value">1 год</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h2 class="slider__main-title">beats solo pro. цвет «красный цитрус»</h2>
+                      <div class="slider__title-desc red--headphones">Беспроводные наушники Solo Pro помогают настроиться на творчество. Для этого предусмотрено два режима прослушивания: режим с активным шумоподавлением и Прозрачный режим.</div>
+                      <ul class="spec__list">
+                        <li class="spec__item">
+                          <span class="spec__text">Зарядка</span>
+                          <span class="spec__text">Вес</span>
+                        </li>
+                        <li class="spec__item--bold">
+                          <span class="spec__text spec__text--bold">2  часа</span>
+                          <span class="spec__text spec__text--bold">215 грамм</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="slider__order">
+                      <a href="#" class="button button--red button--slider">ЗАКАЗАТЬ</a>
+                      <div class="slider__price">14 990 ₽</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
             <a class="slider__arrow slider__arrow--right" id="right" href="#">
               <svg class="slider__arrow-icon">
@@ -352,7 +432,7 @@
                     </div> 
                     <span class="team__position">Оператор</span>
                     <p class="team__text">
-                      Разработал дизаннаушников  beats solo 3.
+                      Разработал дизаннаушников beats solo 3.
                     </p>
                   </div>
                 </div>
@@ -561,5 +641,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./scripts/menu.js"></script>
     <script src="./scripts/team.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./scripts/slider.js"></script>
   </body>
 </html>

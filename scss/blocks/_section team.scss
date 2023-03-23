@@ -73,6 +73,7 @@
 
   @include tablets {
     margin-bottom: rem(15px);
+    margin-right: 0;
   }
 
   @include phones {
@@ -84,12 +85,14 @@
   margin-bottom: rem(26px);
 
   @include tablets {
+    display: flex; 
+    justify-content: center;
     margin-bottom: rem(21px);
   }
 
   @include phones {
-    display: flex;
-    justify-content: center;
+    height: rem(180px); 
+    width: rem(138px);
     margin-bottom: rem(18px);
   }
 }
@@ -164,5 +167,10 @@
 
   @include tablets {
    max-width: rem(234px);
+  }
+
+  @include phones {
+    text-align: center;
+    max-width: rem(330px);
   }
 }
