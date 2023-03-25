@@ -7,13 +7,16 @@ html {
 
 .html {
   font-size: 16px;
-  /*@include tablets {
-  	font-size: $baseFontSize - 1px;
+}
+@media screen and (max-width: 768px) {
+  .html {
+    font-size: 15px;
   }
-
-  @include phones {
-  	font-size: $baseFontSize - 2px;
-  }*/
+}
+@media screen and (max-width: 480px) {
+  .html {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -25,7 +28,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #666666;
   position: relative;
-  margin: 0;
 }
 
 .wrapper {
@@ -44,7 +46,7 @@ body {
 .container {
   margin: 0 auto;
   width: 95%;
-  max-width: 940px;
+  max-width: 1100px;
   position: relative;
 }
 
@@ -107,10 +109,9 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-right: 1.5625rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media screen and (max-width: 768px) {
@@ -142,7 +143,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 1.6875rem;
-  padding-top: 0.625rem;
+  padding-top: 0.3125rem;
 }
 @media screen and (max-width: 768px) {
   .menu {
@@ -283,6 +284,7 @@ footer {
 .welcome__main-title {
   color: #292929;
   font-family: "Play";
+  font-style: bold;
   font-weight: 700;
   font-size: 3rem;
   line-height: 3.25rem;
@@ -338,7 +340,7 @@ footer {
 }
 
 .features__items {
-  margin-right: 1.8125rem;
+  margin-right: 18px;
 }
 .features__items:last-child {
   margin-right: 0;
@@ -348,12 +350,13 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 10.375rem;
 }
 
 .feature__icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-right: 0.6875rem;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-right: 0.75rem;
 }
 
 .feature__img {
@@ -376,14 +379,12 @@ footer {
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.125rem;
+  width: 10.1875rem;
   padding: 1.125rem 2.5625rem;
   text-transform: uppercase;
   border-radius: 6.25rem;
   border: none;
   cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 .button--red {
   background: #E01F3D;
@@ -393,7 +394,7 @@ footer {
   background: transparent;
   color: #FFFFFF;
   text-transform: none;
-  padding: 0 0.25rem;
+  margin-left: 0.9375rem;
 }
 @media screen and (max-width: 768px) {
   .button--transparent {
@@ -443,7 +444,7 @@ footer {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.1875rem;
-  padding: 0 22%;
+  padding: 0 26%;
   text-align: center;
   margin-bottom: 3.875rem;
 }
@@ -484,8 +485,8 @@ footer {
 .benefits__item:before {
   content: url(../img/svg/decor.svg);
   position: absolute;
-  top: 3.75rem;
-  right: 0.1875rem;
+  top: 1.875rem;
+  right: 0;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
 }
@@ -543,15 +544,6 @@ footer {
           transform: translate(-50%, -50%);
 }
 
-.benefit__text {
-  text-align: center;
-}
-@media screen and (max-width: 480px) {
-  .benefit__text {
-    text-align: left;
-  }
-}
-
 .benefit__title {
   font-family: "Play";
   font-style: normal;
@@ -569,8 +561,9 @@ footer {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.1875rem;
-  padding: 0 5%;
+  padding: 0 11%;
   text-decoration: none;
+  text-align: left;
 }
 
 .benefits-section {
@@ -600,10 +593,6 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.reviews__main-title {
-  margin-bottom: 2rem;
 }
 
 .reviews__display {
@@ -668,7 +657,7 @@ footer {
 .reviews__avatar {
   width: 15.8125rem;
   height: 16.5rem;
-  margin-right: 2.3125rem;
+  margin-right: 2.5rem;
 }
 @media screen and (max-width: 768px) {
   .reviews__avatar {
@@ -690,8 +679,6 @@ footer {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding-top: 2.0625rem;
-  min-width: 28.4375rem;
 }
 @media screen and (max-width: 768px) {
   .reviews__content {
@@ -774,16 +761,12 @@ footer {
 
 .order-section {
   position: relative;
-  background: url(../img/order_background.png) center center/cover no-repeat #181818;
+  background-color: #181818;
   color: #FFFFFF;
 }
 
 .section__title--white {
   color: #FFFFFF;
-}
-
-.order-section__main-title {
-  margin-bottom: 3.625rem;
 }
 
 .form {
@@ -826,10 +809,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0.8125rem;
-}
-.form__row--textarea {
-  margin-bottom: 2.1875rem;
+  margin-bottom: 2.25rem;
 }
 
 .form__block {
@@ -849,13 +829,13 @@ footer {
   font-size: 1rem;
   line-height: 1.1875rem;
   color: #FFFFFF;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.1875rem;
 }
 
 .form__input {
   width: 100%;
   border: none;
-  padding: 1rem 1rem;
+  padding: 1.125rem 1.333rem;
   border: 0.1875rem solid transparent;
   border-radius: 0.25rem;
   font-family: "Open Sans";
@@ -868,6 +848,7 @@ footer {
 .form__input--textarea {
   height: 9.5rem;
   resize: none;
+  margin-bottom: 2.625rem;
 }
 .form__input:focus {
   border-color: #E01F3D;
@@ -897,18 +878,10 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 3rem;
-}
-@media screen and (max-width: 768px) {
-  .form__btns {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.form__btn-clear {
-  margin-left: 0.625rem;
 }
 
 .radio {
@@ -1087,4 +1060,3 @@ footer {
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
-/*# sourceMappingURL=main.css.map */
