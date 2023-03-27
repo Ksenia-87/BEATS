@@ -130,6 +130,14 @@
   }
 }  
 
+.form_input.input-error {
+  border-color: hotpink;
+}
+
+.input-error {
+  border-color: hotpink;
+}
+
 .form__controls {
   display: flex;
   flex-wrap: wrap;
