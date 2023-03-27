@@ -1,4 +1,4 @@
-$containerWidth: 1100px /*+ 20px*/;
+$containerWidth: 940px /*+ 20px*/;
 $baseFontSize: 16px;
 
 $black: #292929;
@@ -10,6 +10,7 @@ $white: #FFFFFF;
 $tablets: 768px;
 $phones: 480px; 
 
+$z-fixed-menu: 100;
 
 @import "./blocks/_media.scss";
 @import "./blocks/normalize.css";
@@ -27,10 +28,12 @@ $phones: 480px;
 @import "./blocks/_benefits.scss";
 @import "./blocks/_benefit.scss";
 @import "./blocks/_benefits-section.scss";
+@import "./blocks/_slider-section.scss";
+@import "./blocks/_section team.scss";
 @import "./blocks/_reviews-section";
 @import "./blocks/_reviews.scss";
 @import "./blocks/_reviews__display.scss";
-@import "./blocks/_interactive-avatar.scss";
+@import "./blocks/_reviews-switcher.scss";
 @import "./blocks/_order-section.scss";
 @import "./blocks/_form.scss";
 @import "./blocks/_radio.scss";
@@ -39,3 +42,4 @@ $phones: 480px;
 @import "./blocks/_contacts-section.scss";
 @import "./blocks/_footer.scss";
 @import "./blocks/_socials.scss";
+

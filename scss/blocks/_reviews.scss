@@ -2,3 +2,15 @@
   display: flex;
   justify-content: center;
 }
+
+.revies__switcher--item {
+  margin-right: rem(6px);
+
+  @include phones {
+    margin-right: rem(10px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

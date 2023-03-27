@@ -12,6 +12,10 @@
   padding: 0 3%;
   position: relative;
 
+  @include tablets {
+    padding: 0 .4%;
+  }
+
   @include phones {
     padding: 0;
     margin-bottom: 2.3125rem;
@@ -20,8 +24,8 @@
   &:before {
     content: url(../img/svg/decor.svg);
     position: absolute;
-    top: 1.875rem;
-    right: 0;
+    top: rem(60px);
+    right: rem(3px);
     transform: translateX(50%);
 
     @include tablets {

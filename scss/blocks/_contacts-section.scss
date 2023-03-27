@@ -1,6 +1,18 @@
+.contacts {
+  background: #fff; 
+}
+
 .contacts-section {
-  background: url("../img/svg/map.svg") center center no-repeat;
+  position: relative;
+}
+
+.contacts-section__map {
   width: 100%;
   height: 100%;
-  display: flex;
+}
+
+.contacts-section__map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
