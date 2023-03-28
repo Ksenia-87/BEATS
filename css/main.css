@@ -1814,7 +1814,7 @@ footer {
   outline: none;
 }
 
-.form_input.input-error {
+.form_input .input-error {
   border-color: hotpink;
 }
 
@@ -1918,8 +1918,8 @@ footer {
 
 .modal {
   display: none;
-  width: 19.3125rem;
-  height: 11rem;
+  min-width: 19.3125rem;
+  min-height: 11rem;
 }
 .modal.error__modal .modal__content {
   color: #E01F3D;

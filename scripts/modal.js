@@ -3,7 +3,7 @@ const validateFields = (form, fieldsArray) => {
   fieldsArray.forEach(field => {
     field.removeClass("input-error");
     if (field.val().trim() === "") {
-      field.addClass(".input-error");
+      field.addClass("input-error");
     }
   });
 
@@ -45,7 +45,7 @@ $('.form').submit(e => {
     });
 
     request.fail((data) => {
-      const message = data.responseJSON.message;
+      const message = data?.responseJSON?.message ?? 'Произошла ошибка, попробуйте позже';
       content.text(message);
       modal.addClass("error-modal");
     });
