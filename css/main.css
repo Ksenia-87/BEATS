@@ -849,12 +849,12 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .slider__info {
-    max-width: 38.4375rem;
+    width: 38.4375rem;
   }
 }
 @media screen and (max-width: 480px) {
   .slider__info {
-    max-width: 25.75rem;
+    width: 25.75rem;
   }
 }
 
@@ -1360,12 +1360,29 @@ footer {
   position: relative;
   color: #FFFFFF;
 }
+@media screen and (max-width: 768px) {
+  .colors {
+    background-position: top right 15%;
+  }
+}
 
 .colors__title {
   text-align: start;
   margin-bottom: auto;
   margin-top: 7.1875rem;
   margin-left: 5.25rem;
+}
+@media screen and (max-width: 768px) {
+  .colors__title {
+    margin-left: 2.5rem;
+    margin-top: 5.625rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .colors__title {
+    margin-left: 0.625rem;
+    margin-top: 4.75rem;
+  }
 }
 
 .colors__menu {
@@ -1396,7 +1413,15 @@ footer {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .colors__item {
+    height: auto;
+  }
+}
 @media screen and (max-width: 480px) {
+  .colors__item {
+    height: auto;
+  }
   .colors__item--active {
     position: absolute;
     left: 0;

@@ -114,11 +114,11 @@
   margin-bottom: rem(80px);
 
   @include tablets {
-    max-width: rem(615px);
+    width: rem(615px);
   }
 
   @include phones {
-    max-width: rem(412px);
+    width: rem(412px);
   }
 }
 

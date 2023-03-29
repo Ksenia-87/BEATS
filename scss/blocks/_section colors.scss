@@ -2,6 +2,10 @@
   background: url("../img/girl-sport.png") no-repeat right center;
   position: relative;
   color: $white;
+
+  @include tablets {
+    background-position: top right 15%;
+  }
 }
 
 .colors__title {
@@ -9,6 +13,16 @@
   margin-bottom: auto;
   margin-top: rem(115px);
   margin-left: rem(84px);
+
+  @include tablets {
+    margin-left: rem(40px);
+    margin-top: rem(90px);
+  }
+
+  @include phones {
+    margin-left: rem(10px);
+    margin-top: rem(76px);
+  }
 }
 
 .colors__menu {
@@ -32,7 +46,13 @@
 .colors__item {
   display: flex;
 
+  @include tablets {
+    height: auto;
+  }
+
   @include phones {
+    height: auto;
+
     &--active {
       position: absolute;
       left: 0;
