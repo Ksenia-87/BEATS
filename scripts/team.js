@@ -31,5 +31,4 @@ $('.team__dropdown').click(e => {
     closeEveryItem(container);
     openItem($this);
   }
-
 })

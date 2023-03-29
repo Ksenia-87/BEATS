@@ -1,0 +1,107 @@
+.colors {
+  background: url("../img/girl-sport.png") no-repeat right center;
+  position: relative;
+  color: $white;
+}
+
+.colors__title {
+  text-align: start;
+  margin-bottom: auto;
+  margin-top: rem(115px);
+  margin-left: rem(84px);
+}
+
+.colors__menu {
+  display: flex;
+  position: absolute; 
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  @include phones {
+    width: 100%;
+    justify-content: flex-end;
+    .colors__item.active {
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.colors__item {
+  display: flex;
+
+  @include phones {
+    &--active {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 3;
+    }
+  }
+  &--active {
+    colors__desc {
+      opacity: 1;
+    }
+  }
+}
+
+.colors__button {
+  color: inherit;
+  min-width: rem(102px);
+  width: 100%;
+  position: relative;
+
+  @include phones {
+    min-width: 90px;
+  }
+}
+
+.colors__button-text {
+  position: absolute;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  bottom: rem(34px);
+  font-family: Alegreya Sans;
+  font-weight: 700;
+  font-size: rem(36px);
+  line-height: rem(43px);
+  white-space: nowrap;
+  left: 50%;
+}
+
+
+.colors__content {
+  background: rgba(51, 53, 55, 0.9);
+  width: 0;
+  overflow: hidden;
+  transition: width .3s linear;
+  position: relative;
+}
+
+.colors__container {
+  padding: rem(31px) rem(73px) rem(0px) rem(38px);
+}
+
+.colors__close {
+  position: absolute;
+  top: rem(20px);
+  right: rem(25px);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.colors__img {
+  width: rem(20px);
+  height: rem(20px);
+}
+
+.colors__desc {
+  opacity: 0;
+  line-height: 1.8;
+  transition: opacity .3s linear;
+}

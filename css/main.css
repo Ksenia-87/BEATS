@@ -293,15 +293,6 @@ footer {
           justify-content: space-between;
   height: 100%;
   padding: 1.5rem 0 3.125rem 0;
-  /*@include tablets {
-    padding: 3.25rem 0 3.25rem 0;
-    background: url("../img/svg/headphones_main768.svg") top 32%  center no-repeat;
-  }
-
-  @include phones {
-    padding: 3.375rem 0 3.375rem 0;
-    background: url("../img/svg/headphones_main768.svg") top 25%  center no-repeat;
-  }*/
 }
 
 .welcome__title-section {
@@ -1362,6 +1353,122 @@ footer {
     text-align: center;
     max-width: 20.625rem;
   }
+}
+
+.colors {
+  background: url("../img/girl-sport.png") no-repeat right center;
+  position: relative;
+  color: #FFFFFF;
+}
+
+.colors__title {
+  text-align: start;
+  margin-bottom: auto;
+  margin-top: 7.1875rem;
+  margin-left: 5.25rem;
+}
+
+.colors__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .colors__menu {
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .colors__menu .colors__item.active {
+    position: absolute;
+    left: 0;
+  }
+}
+
+.colors__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 480px) {
+  .colors__item--active {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+  }
+}
+.colors__item--active colors__desc {
+  opacity: 1;
+}
+
+.colors__button {
+  color: inherit;
+  min-width: 6.375rem;
+  width: 100%;
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  .colors__button {
+    min-width: 90px;
+  }
+}
+
+.colors__button-text {
+  position: absolute;
+  -webkit-transform: rotate(-90deg) translateY(-50%);
+          transform: rotate(-90deg) translateY(-50%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  bottom: 2.125rem;
+  font-family: Alegreya Sans;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.6875rem;
+  white-space: nowrap;
+  left: 50%;
+}
+
+.colors__content {
+  background: rgba(51, 53, 55, 0.9);
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+  position: relative;
+}
+
+.colors__container {
+  padding: 1.9375rem 4.5625rem 0rem 2.375rem;
+}
+
+.colors__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5625rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.colors__img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.colors__desc {
+  opacity: 0;
+  line-height: 1.8;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
 }
 
 .reviews__section {
