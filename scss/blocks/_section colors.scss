@@ -52,7 +52,6 @@
 .colors__button {
   color: inherit;
   min-width: rem(102px);
-  width: 100%;
   position: relative;
 
   @include phones {
@@ -96,12 +95,15 @@
 }
 
 .colors__img {
-  width: rem(20px);
-  height: rem(20px);
+  display: block;
+  width: rem(18px);
+  height: rem(18px);
+  fill: $white;
+  transition: .3s;
 }
 
 .colors__desc {
-  opacity: 0;
+  /*opacity: 0;*/
   line-height: 1.8;
   transition: opacity .3s linear;
 }
