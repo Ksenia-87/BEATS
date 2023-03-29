@@ -45,21 +45,16 @@
 
 .colors__item {
   display: flex;
-
-  @include tablets {
-    height: auto;
-  }
+  height: 100%;
 
   @include phones {
-    height: auto;
 
     &--active {
       position: absolute;
       left: 0;
-      right: 0;
       top: 0;
-      bottom: 0;
-      z-index: 3;
+      width: 100%;
+      z-index: 1;
     }
   }
   &--active {
@@ -99,6 +94,10 @@
   overflow: hidden;
   transition: width .3s linear;
   position: relative;
+
+  @include phones {
+    z-index: 3;
+  }
 }
 
 .colors__container {

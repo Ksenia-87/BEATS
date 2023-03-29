@@ -11,12 +11,15 @@
     const paddingLeft = parseInt(textContainer.css("padding-left"));
     const paddingRight = parseInt(textContainer.css("padding-right"));
     
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const isTablet = window.matchMedia("(max-width: 768px)").matches;
+    const isMobile = window.matchMedia("(max-width: 480px)").matches;
 
-    if (isMobile) {
+    if (isTablet) {
        reqItemWidth = screenWidth - titleWidth;
-    } else {
-      reqItemWidth = 500;
+    } if (isMobile) {
+      reqItemWidth = screenWidth - titlesBlocks.width();
+    } if (!isTablet && !isMobile) {
+      reqItemWidth = 524;
     }
 
     return {

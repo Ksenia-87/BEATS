@@ -1412,23 +1412,15 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-@media screen and (max-width: 768px) {
-  .colors__item {
-    height: auto;
-  }
+  height: 100%;
 }
 @media screen and (max-width: 480px) {
-  .colors__item {
-    height: auto;
-  }
   .colors__item--active {
     position: absolute;
     left: 0;
-    right: 0;
     top: 0;
-    bottom: 0;
-    z-index: 3;
+    width: 100%;
+    z-index: 1;
   }
 }
 .colors__item--active colors__desc {
@@ -1468,6 +1460,11 @@ footer {
   -webkit-transition: width 0.3s linear;
   transition: width 0.3s linear;
   position: relative;
+}
+@media screen and (max-width: 480px) {
+  .colors__content {
+    z-index: 3;
+  }
 }
 
 .colors__container {
