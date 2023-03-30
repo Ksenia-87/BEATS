@@ -607,6 +607,29 @@
             </div>
           </div>
         </section>
+        <section class="video">
+          <div class="video__container">
+            <h2 class="video__title">как мы работаем</h2>
+            <div class="video__player">
+              <video id="video" poster="./img/video-bg.png">
+                <source src="./Beats.mp4" type="video/mp4">
+              </video>
+              <img class="play video__play" src="./img/play-white.png" alt="Icon">
+            </div>
+            <div class="video__toolbar">
+              <div class="duration">
+                <img class="duration__icon play" src="./img/play.png" alt="Icon" >
+                <input class="duration__length" type="range" id="durationLevel" min="0" max="237.284717">
+              </div>
+              <div class="sound">
+                <img class="sound__img" src="./img/sound-icon.png" alt="Icon" id="micLevel">
+                <div class="sound__volume">
+                  <input class="duration__length duration__length--other" type="range" id="volumeLevel" min="0" max="10">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="section order-section">
           <div class="container order__container">
             <h2 class="section__title section__title--white order-section__main-title">закажите доставку</h2>
@@ -766,5 +789,6 @@
     <script src="./scripts/slider.js"></script>
     <script src="./scripts/modal.js"></script>
     <script src="./scripts/horizontal-acco.js"></script>
+    <script src="./scripts/video.js"></script>
   </body>
 </html>

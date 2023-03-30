@@ -1,10 +1,11 @@
-.reviews__section {
+.reviews {
   position: relative;
 
   &:before {
     content: url("../img/svg/circle.svg");
     position: absolute;
     bottom: -1.25rem;
-    left: 5%;
+    left: 7%;
+    z-index: 3;
   }
 }
