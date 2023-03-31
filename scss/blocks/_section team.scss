@@ -1,5 +1,5 @@
 .team {
-  /*position: relative;*/
+  position: relative;
   display: flex;
 }
 
@@ -18,7 +18,7 @@
 
 .team__title {
   font-weight: 700;
-  font-size: 48px;
+  font-size: rem(48px);
   line-height: rem(52px);
   color: $black;
   text-transform: uppercase;
@@ -26,10 +26,12 @@
   margin-bottom: rem(53px);
 
   @include tablets {
-    margin-bottom: rem(33px);
+    margin-bottom: rem(35px);
   }
 
   @include phones {
+    font-size: rem(32px);
+    line-height: rem(36px);
     margin-bottom: rem(36px);
   }
 }
@@ -72,7 +74,7 @@
   }
 
   @include tablets {
-    margin-bottom: rem(15px);
+    margin-bottom: rem(16px);
     margin-right: 0;
   }
 
@@ -95,6 +97,10 @@
     width: rem(138px);
     margin-bottom: rem(18px);
   }
+}
+
+.team__photo {
+  align-self: center;
 }
 
 .team__dropdown {
@@ -121,6 +127,14 @@
   cursor: pointer;
   margin-right: 4px;
   margin-bottom: rem(10px);
+
+  @include tablets {
+    /*margin-bottom: rem(16px);*/
+  }
+
+  @include phones {
+    /*margin-bottom: rem(13px);*/
+  }
 }
 
 .team__dropdown-icon {
@@ -142,6 +156,12 @@
   overflow: hidden;
   height: 0;
   transition: height .3s;
+}
+
+.team__content-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .team__position {

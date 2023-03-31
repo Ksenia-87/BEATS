@@ -11,17 +11,16 @@
 
 .fixed-menu__item {
   margin-bottom: 0.4375rem;
+}
 
-  &--active {
-    .fixed-menu__link {
-      border-color: $red;
-    }
+.active {
+  .fixed-menu__link {
+    border-color: $red;
+  }
 
-    .fixed-menu__link:before {
-      content: "";
-      background: $red;
-    }
-
+  .fixed-menu__link:before {
+    content: "";
+    background: $red;
   }
 }
 

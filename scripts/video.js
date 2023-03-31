@@ -33,21 +33,18 @@ document.addEventListener('DOMContentLoaded', e => {
   soundControl.value = soundControl.max;
 })
 
-
 function playStop() {
   let playImg = document.querySelector('.video__play');
   playImg.classList.toggle('video__play--active');
 
   durationControl.max = video.duration;
 
-  if(video.paused && playImg.classList.contains('active')) {
+  if(video.paused) {
     video.play();
     intervalId = setInterval(updateDuration, 1000 /66);
-    playImg.classList.remove('active');
   } else{
     video.pause();
     clearInterval(intervalId);
-    playImg.classList.add('active');
   }
 }
 
