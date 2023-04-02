@@ -34,7 +34,7 @@ body {
 
 .wrapper {
   position: relative;
-  /*overflow: hidden;*/
+  overflow: hidden;
   background-color: #fff;
   height: 100%;
   width: 100%;
@@ -44,7 +44,11 @@ body {
 .wrapper__content {
   height: 100%;
   position: relative;
-  transition: transform 1s, -webkit- transform 1s;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 .container {
@@ -267,7 +271,8 @@ footer {
 .welcome {
   background: url("../img/svg/headphones_main.svg") left 80% center no-repeat;
   background-color: #F5F5F5;
-  height: 100vh;
+  /*height: 100vh;*/
+  height: 100%;
   min-height: 40.625rem;
   color: #292929;
   position: relative;
@@ -465,7 +470,8 @@ footer {
 }
 
 .section {
-  height: 100vh;
+  /*height: 100vh;*/
+  height: 100%;
   min-height: 37.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1342,17 +1348,19 @@ footer {
   transition: height 0.3s;
 }
 
-.team__content-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (max-width: 480px) {
+  .team__content-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .team__position {
@@ -2321,6 +2329,7 @@ footer {
   top: 40%;
   right: 3%;
   z-index: 100;
+  color: #292929;
 }
 @media screen and (max-width: 768px) {
   .fixed-menu {
@@ -2331,11 +2340,10 @@ footer {
 .fixed-menu__item {
   margin-bottom: 0.4375rem;
 }
-
-.active .fixed-menu__link {
+.fixed-menu__item--active .fixed-menu__link {
   border-color: #E01F3D;
 }
-.active .fixed-menu__link:before {
+.fixed-menu__item--active .fixed-menu__link:before {
   content: "";
   background: #E01F3D;
 }
@@ -2429,13 +2437,6 @@ footer {
 .contacts-section__map {
   width: 100%;
   height: 100%;
-}
-
-.contacts-section__map-img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .footer {

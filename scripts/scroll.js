@@ -1,106 +1,144 @@
-let onePageScroll = () => {
-  const wrapper = document.querySelector('.wrapper');
-  const content = wrapper.querySelector('.wrapper__content');
-  const pages = content.querySelectorAll('.section');
-  const points = document.querySelectorAll('.fixed-menu__item');
-  const dataScrollto = document.querySelectorAll('[data-scroll-to]');
+const sections = $("section");
+const display = $(".wrapper__content");
+const sideMenu = $(".fixed-menu");
+const menuItems = sideMenu.find(".fixed-menu__item");
 
-  let inScroll = false;
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
 
-  addNavigation();
-  wheel();
-  keyPush();
+let inScroll = false;
 
-  function doTransition(pageNumber) {
-    const position = `${pageNumber * (-100)}%`;
+sections.first().addClass("active");
 
-    if(inScroll) return;
+const countSectionPosition = (sectionEq) => {
+  const position = sectionEq * -100;
 
-    inScroll = true;
+  if(isNaN(position)) {
+    console.error("передано неверное значение в  countSectionPosition");
+    return 0;
+  }
 
-    addClass(pages);
+  return position;
+}
 
-    content.style.transform = `translateY(${position})`;
+const changeMenuThemeForSection = (sectionEq) => {
+  const currentSection = sections.eq(sectionEq);
+  const menuTheme = currentSection.attr("data-sidemenu-theme");
+  const activeClass = "fixed-menu--shadowed";
+  
+  if(menuTheme === "white") {
+    sideMenu.addClass(activeClass);
+  } else {
+    sideMenu.removeClass(activeClass);
+  }
+};
+
+const resetActiveClassForItem = (items, itemEq, activeClass) => {
+  items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
+}
+
+const performTransition = (sectionEq) => {
+  if(inScroll) return;
+
+  const transitionOver = 1000;
+  const mouseInertiaOver = 300;
+
+  inScroll = true;
+
+    const position = countSectionPosition(sectionEq);
+
+    changeMenuThemeForSection(sectionEq);
+
+    display.css({
+      transform: `translateY(${position}%)`,
+    });
+
+    resetActiveClassForItem(sections, sectionEq, "active");
+
+    //sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
+
+    //sideMenu.find(".fixed-menu__item").eq(sectionEq).addClass("active").siblings().removeClass("active");
 
     setTimeout(() => {
       inScroll = false;
-      addClass(points);
-    }, 1000);
-
-    function addClass(arr) {
-      arr[pageNumber].classlist.add('active');
+      resetActiveClassForItem(menuItems, sectionEq, "fixed-menu__item--active");
+    }, transitionOver + mouseInertiaOver);
   
-      for(const item of arr) {
-        if(item != arr[pageNumber]) {
-          item.classList.remove('active');
-        }
+};
+
+const viewportScroller = () => { 
+  const activeSection = sections.filter(".active");
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  return {
+    next() {
+      if(nextSection.length) {
+        performTransition(nextSection.index());
       }
-    }
-  }
-
-  function addNavigation() {
-    for(const point of dataScrollto) {
-      point.addEventListener('click', e => {
-        e.preventDefault();
-        doTransition(point.dataset.scrollTo);
-      })
-    }
-  }
-
-  function wheel() {
-    document.addEventListener('wheel', e => {
-      const direct = e.deltaY > 0 ? 'up' : 'down';
-
-      scrollToPage(direct);
-    })
-  }
-
-  function keyPush() {   
-    document.addEventListener('keydown', e => {
-      switch (e.code) {
-        case 40:
-        scrollToPage('up');
-          break;
-        case 38:
-        scrollToPage('down');
-          break;
-        default:
-          break;
+    },
+    prev() {
+      if(prevSection.length) {
+        performTransition(prevSection.index());
       }
-    })
+    },
+  };
+};
+
+$(window).on("wheel", e => {
+  const deltaY = e.originalEvent.deltaY;
+  const scroller = viewportScroller();
+
+  if (deltaY >0) {
+    scroller.next();
   }
 
-  function definePage(arr) {
-    let result;
-    for (let i = 0; i < arr.length; i++) {     
-      if(iter.classList.contains('active')){
-        return {
-          iterIndex: 1,
-          iterActive: iter,
-          iterNext: iter.nextElementSibling,
-          iterPrev: iter.previousElementSibling
-        }
-        return;
-      }
-    }
-    return result;
+  if (deltaY <0) {
+    scroller.prev();
   }
+});
 
-  function scrollToPage(direct) {
-    let page = definePage(pages);
+$(window).on("keydown", e => {
+  const tagName = e.target.tagName.toLowerCase();
+  const userTypingInInputs = tagName === "input" || tagName === "textarea";
+  const scroller = viewportScroller();
 
-    if(direct === 'up' && page.iterNext) {
-      let numPage = page.iterIndex + 1;
-
-      doTransition(numPage);
+  if (userTypingInInputs) return; 
+    switch (e.code) {
+      case 38:
+        scroller.prev();
+        break;
+  
+      case 40:
+        scroller.next();
+        break;
     }
+});
 
-    if (direct === 'down' && page.iterPrev) {
-      let numPage = page.iterIndex - 1;
+$(".wrapper").on("touchmove", e => e.preventDefault());
 
-      doTransition(numPage);
-    }
-  }
+$("[data-scroll-to]").click(e => {
+  e.preventDefault();
+
+  const $this = $(e.currentTarget);
+  const target = $this.attr("data-scroll-to");
+  const reqSection = $(`[data-section-id=${target}]`);
+
+  performTransition(reqSection.index());
+});
+
+if (isMobile) {
+  //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+  $("body").swipe({
+    swipe: function(event, direction) {
+      const scroller = viewportScroller();
+      let scrollDirection = "";
+
+      if(direction === "up") scrollDirection = "next";
+      if(direction === "down") scrollDirection = "prev";
+
+      scroller[scrollDirection]();
+    },
+  });
 }
 
-onePageScroll();

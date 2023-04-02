@@ -159,9 +159,12 @@
 }
 
 .team__content-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .team__position {
