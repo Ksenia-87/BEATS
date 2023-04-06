@@ -1,0 +1,22 @@
+$containerWidth: 940px /*+ 20px*/;
+$baseFontSize: 16px;
+
+$black: #292929;
+$red: #E01F3D;
+$darkRed: #CA1B36;
+$white: #FFFFFF;
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px; 
+
+$z-fixed-menu: 100;
+
+
+@import "./layout/_base.scss";
+@import "./layout/_media.scss";
+
+@import "./blocks/*.scss";
+
+
+
