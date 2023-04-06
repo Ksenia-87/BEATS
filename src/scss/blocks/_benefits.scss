@@ -18,7 +18,7 @@
 
   @include phones {
     padding: 0;
-    margin-bottom: 2.3125rem;
+    margin-bottom: rem(37px);
   }
 
   &:before {

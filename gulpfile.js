@@ -1,6 +1,6 @@
 const {src, dest, task, series, watch, parallel} = require('gulp');
 const rm = require('gulp-rm');
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('dart-sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
@@ -30,6 +30,12 @@ task("copy:html", () => {
   .pipe(reload({stream: true}));
 });
 
+task("copy:img", () => {
+  return src(`${SRC_PATH}/img/**/*.*`)
+  .pipe(dest(`${DIST_PATH}/img`))
+  .pipe(reload({stream: true}));
+});
+
 task("copy:mp4", () => {
   return src('src/*.mp4')
   .pipe(dest(DIST_PATH))
@@ -56,8 +62,7 @@ task("styles", () => {
     .pipe(gulpif(env === 'prod', gcmq()))
     .pipe(gulpif(env === 'prod', cleanCSS()))
     .pipe(gulpif(env === 'dev', sourcemaps.write()))
-    //.pipe(dest(`${DIST_PATH}/css`))
-    .pipe(dest((DIST_PATH)))
+    .pipe(dest(`${DIST_PATH}/css`))
     .pipe(reload({stream: true}));
 });
 
@@ -72,7 +77,7 @@ task("scripts", () => {
     )
     .pipe(uglify())
     .pipe(sourcemaps.write())
-    .pipe(dest(`${DIST_PATH}/css`))
+    .pipe(dest(`${DIST_PATH}/scripts`))
     .pipe(reload({stream: true}));
 });
 
@@ -118,7 +123,7 @@ task(
   "default", 
   series(
     "clean", 
-    parallel("copy:html", "styles", "scripts", "svg"),
+    parallel("copy:html", "copy:img", "copy:mp4", "styles", "scripts", "svg"),
     parallel("watch", "server")
   )
 );
@@ -127,6 +132,6 @@ task(
   "build", 
   series(
     "clean", 
-    parallel("copy:html", "styles", "scripts", "svg"))
+    parallel("copy:html", "copy:img", "copy:mp4", "styles", "scripts", "svg"))
 );
 

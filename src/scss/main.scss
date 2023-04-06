@@ -12,9 +12,8 @@ $phones: 480px;
 
 $z-fixed-menu: 100;
 
-
-@import "./layout/_base.scss";
 @import "./layout/_media.scss";
+@import "./layout/_base.scss";
 
 @import "./blocks/*.scss";
 
