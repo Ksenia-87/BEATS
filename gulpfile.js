@@ -105,7 +105,7 @@ task("svg", () => {
 task('server', () => {
   browserSync.init({
       server: {
-        baseDir: "./${DIST_PATH}"
+        baseDir: `${DIST_PATH}`
       },
       open: false
   });

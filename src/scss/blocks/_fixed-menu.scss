@@ -8,6 +8,17 @@
   @include tablets {
     display: none;
   }
+
+  &--shadowed {
+    .fixed-menu__link {
+      border-color: $white;
+
+      &:before {
+        content: "";
+        background: $white;
+      }
+    }
+  }
 }
 
 .fixed-menu__item {

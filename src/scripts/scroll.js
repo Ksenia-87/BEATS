@@ -70,6 +70,7 @@ const viewportScroller = () => {
   const activeSection = sections.filter(".active");
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
+  
 
   return {
     next() {
@@ -136,7 +137,7 @@ if (isMobile) {
 
       if(direction === "up") scrollDirection = "next";
       if(direction === "down") scrollDirection = "prev";
-
+      if(!scrollDirection) return;
       scroller[scrollDirection]();
     },
   });

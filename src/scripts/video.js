@@ -1,7 +1,9 @@
 let video;
 let durationControl;
 let soundControl;
+let soundLevel;   
 let intervalId;
+
 
 document.addEventListener('DOMContentLoaded', e => {
   video = document.getElementById('video');
@@ -69,7 +71,7 @@ function setVideoDuration () {
 }
 
 function changeSoundVolume() {
-  video.volume = soundControl / 10;
+  video.volume = soundControl.value / 10;
 }
 
 function soundOf() {
