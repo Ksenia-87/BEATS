@@ -47,10 +47,10 @@ $textColor: #292929;
     transition: left .3s;
     padding: 20% 28% 30%;
     margin: 0;
-  }
 
-  &--active {
-    left: 0%;
+    &--active {
+      left: 0%;
+    }
   }
 
   @include phones {
